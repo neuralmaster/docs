@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.neuralmaster.org/nm_inpainter/README_RUS/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Neural Master extension for Automatic111 Web UI - Neural Master</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Neural Master extension for Automatic111 Web UI";
+        var mkdocs_page_input_path = "nm_inpainter\\README_RUS.md";
+        var mkdocs_page_url = "/nm_inpainter/README_RUS/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+          <a href="../..">
+          <img src="../../img/nm_logo_top.png" class="logo" alt="Logo"/>
+        </a>
+      <div class="wy-side-nav-search"><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../get_started/">Get started</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../how_to_install_sd/">How to install SD</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">SD extention</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../changelog/">Changelog</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../basics/">Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../common_pipeline/">Common pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../support/">Support</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">UI</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ui_basics/">UI Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../panels/create_session_panel/">Create session panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../panels/open_session_panel/">Open session panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../panels/camera_panel/">Camera control panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../panels/main_control_panel/">Main control panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../panels/render_settings_panel/">Render settings panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../panels/sd_connection_panel/">SD connection panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../panels/sd_settings_panel/">(NEW) SD settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../panels/sd_controlnet_panel/">SD ControlNet panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../panels/layers_panel/">Texture layers panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../panels/player_panel/">Player panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../panels/debug_panel/">Debug panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../panels/inpaint_settings_panel/">(NEW) Inpait Settings panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../panels/inpaint_tools_panel/">(NEW) Inpaint Tools panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../panels/image_selector/">Image settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../panels/addon_settings_page/">Addon preferences</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../integrated_products/">Integrated products</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../contacts/">Contacts</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Neural Master</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Neural Master extension for Automatic111 Web UI</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="neural-master-extension-for-automatic111-web-ui">Neural Master extension for Automatic111 Web UI</h1>
+<p>Расширение является препроцессором и выполняется перед основным циклом SD.
+Расширенеи совместимо со всеми моделями, эбедингами, моделями контролнет и прочими дополнениями к SD, поскольку не касается их внутренней структуры, а только подготоваливает маски для работы SD.  </p>
+<p>Расширение наиболее эффективно в сочетании с дополнением NeuralMaster для блендера, которое создает автоматически корректную маску для его работы. </p>
+<h2 id="_1">Устанока расширения</h2>
+<p>Используется стандартная процедура установки расширений для Automatic 1111</p>
+<h2 id="_2">Использование</h2>
+<ol>
+<li>Выберите тип inpainting fill = 'NeuralMaster' </li>
+<li>Используйте двухканальную маску инпаинта, формат которой опасан ниже. </li>
+</ol>
+<p><strong>Примечания</strong><br />
+При помощи редактора картинок в веб интерфейсе Automatic 1111 подобную двухканальную маску создать невозможно, однако, ее можно загрузить в режиме Inpaint upload.
+При использовании Blender addon Neural Master, маска создается автоматически. </p>
+<h2 id="_3">Проблематика</h2>
+<p>При исопльзовании режима инпаинтинга на вход SD в подается изображение предварительно подгтовленное, в соотвествии с заданной маской инпаинта и параметром Inpainting Fill.
+То етсь, Inpainting Fill - работает как препроцессор перед работой SD.</p>
+<p>В интерфейсей Automatic1111 WebUI доступно 4 варианта Inpainting Fill:<br />
+- Fill<br />
+- Original<br />
+- Nothing<br />
+- Noise  </p>
+<p>Рассмотрим применение каждого режима на конкретном примере дорисовки текстуры яблока c помощью дополнения Blender NeuralMaster.</p>
+<h3 id="_4">Исхолдные данные</h3>
+<p>Будем использовать модель SD 1.5, sampler DPM++ 2M Keras, а также маски Controlnet Normal, Depth (для точного совествия текстуры и 3д-модели) и IP Adapter для задания референсного изображения.
+В качесве референсного изображения будем использовать некоторую картинку с яблоком, однаковую во всех случаях.</p>
+<p>Исходная 3д модель выглядит так:</p>
+<p>Сначаал создаем текстуру текстура для модели яблока форнтальной камерой в режиме txt2img при помощи референсной картинки, а также дефолтных параметров адона (ControlNet Depth + Normal + IP adapter).<br />
+Получаем изображение:  <br />
+<img alt="Initial image" src="../images/source_diffuse_texture.png" /></p>
+<p>Поворачиваем камеру на 90 градусов и видим следующее:
+<img alt="Inpaint source image" src="../images/inpaint_source_image.png" /></p>
+<p>На боковой поверхности текстура очень сильно растянута, а в центральной части и вовсе абсолютно неверный белый цвет. </p>
+<p>Будем пробоваить дорисовать эту текстуру в режиме инпаинта двумяразными вариантами маски.</p>
+<p>Бинарная маска:
+<img alt="Inpaint mask" src="../images/inpaint_mask_bw.png" />  </p>
+<p>Сглаженаня маска:<br />
+<img alt="Inpaint mask 2" src="../images/inpaint_mask.png" /></p>
+<p>(Маски сгененированы автоматичеки в NeuralMaster Blender Addon с настрйоками по умолчанию).</p>
+<h3 id="original">Режим Original</h3>
+<p>Режим <strong>Original</strong>не иодицифирует изображение перед подачей его на вход SD.</p>
+<p>То есть, на вход SD подается все то же изображение:
+<img alt="Inpaint source image" src="../images/inpaint_source_image.png" /></p>
+<p>Латентное представление которой выглядит так:</p>
+<p><img alt="Inpaint source latent" src="../images/init_latent_original.png" /> (Сглаженная маска)</p>
+<p><img alt="Inpaint source latent" src="../images/init_latent_original_bw.png" /> (Бинарная маска)</p>
+<p>В результате инпаинта получаем:</p>
+<p>При использовании бинарной маски:
+<img alt="Inpaint result" src="../images/nm_new_diffuse_texture_original_bw.png" /></p>
+<p>При использовании сглаженной маски:
+<img alt="Inpaint result" src="../images/nm_new_diffuse_texture_original.png" /> </p>
+<p>Этот режим отлично подходит, если изображение, которое надо дорисовать, уже примерно похоже на желаемый результат, и его необходимо улучшить.
+В нашем примере получаем фейл, поскольку SD пытается встроить в картинку широкую белую послосу посередине.   </p>
+<h3 id="fill">Режим Fill</h3>
+<p>Режим <strong>Fill</strong> заполянет изображение в области инпаинта некоторым средним цветом картинки (исключая облатсь инпаинта) и подает его на вход SD.<br />
+Таким образом, на выходе препроцессора Fill получаем изображение: </p>
+<p>При использовании бинарной маски:
+<img alt="SD source image" src="../images/image_masked_fill_bw.png" /></p>
+<p>При использовании сглаженной маски:
+<img alt="SD source image" src="../images/image_masked_fill.png" /></p>
+<p>Латентное представление которого выглядит так:
+<img alt="SD source latent" src="../images/init_latent_fill_bw.png" /> (Бинарная маска)
+<img alt="SD source latent" src="../images/init_latent_fill.png" /> (Cглаженная маска)  </p>
+<p>В результате генерации получаем изображение:</p>
+<p>При использовании бинарной маски:<br />
+<img alt="SD result" src="../images/nm_new_diffuse_texture_fill_bw.png" /></p>
+<p>При использовании сглаженной маски:
+<img alt="SD result" src="../images/nm_new_diffuse_texture_fill.png" /></p>
+<p>У изображения появляется темный серый оттенок, потому что средний цвет картинки учитывает и темно-серый цвет фона, а не только цвет полезного объекта - яблока.  </p>
+<p>В результате, изображение после инпаинта также неудовлетварительно.</p>
+<h3 id="nothing">Режим Nothing</h3>
+<p>В этом режиме латентное прсдтавление изображения, в латентном представлении, заливается нейтральным цветом, что выглядит так:</p>
+<p><img alt="SD source latent" src="../images/init_latent_nothing_bw.png" /> - бинарная маска<br />
+<img alt="SD source latent" src="../images/init_latent_nothing.png" /> - сглаженная маска</p>
+<p>В результате генерации получаем изображения тоже не удовлетворительного качества  </p>
+<p>При использовании бинарной маски:<br />
+<img alt="SD result" src="../images/nm_new_diffuse_texture_nothing_bw.png" /></p>
+<p>При использовании сглаженной маски:
+<img alt="SD result" src="../images/nm_new_diffuse_texture_nothing.png" /></p>
+<h3 id="noise">Режим Noise</h3>
+<p>Препроцессор <strong>Noise</strong> заоплняет изображение в латентном представлении некоторым рандомным шумом, что выглядит так:</p>
+<p><img alt="SD source latent" src="../images/init_latent_noise_bw.png" /> - бинарная маска<br />
+<img alt="SD source latent" src="../images/init_latent_noise.png" /> - сглаженная маска</p>
+<p>Обычно, это дает нечто совершенно ужасное, однако, в данном случае, благодаря IP Adapter, результат не так уж и плох, но тоже не удовлетворительный.</p>
+<p>При использовании бинарной маски:<br />
+<img alt="SD result" src="../images/nm_new_diffuse_texture_noise_bw.png" /></p>
+<p>При использовании сглаженной маски:
+<img alt="SD result" src="../images/nm_new_diffuse_texture_noise.png" /></p>
+<h3 id="_5">Вывод эксперимента</h3>
+<p>Наилучший результат позволяют достичь режимы Original (обеспечивающий маскимально качественынй стык) и Fill (который учитывает контекст), но они имеют недостатки:  </p>
+<ol>
+<li>
+<p>Fill при заливке использует ненужный цвет фона, а не только цвет полезного объекта.</p>
+</li>
+<li>
+<p>Original учитывает некорретный исходный цвет картинки в области инпаинта.</p>
+</li>
+</ol>
+<h2 id="neural-master">Режим Neural Master</h2>
+<p>Новый режим инпаинта NeuralMaster призван исправить перечисленыне недостатки, заполняя облатсь инпаинта изображением, зависящим от контекста, но более продвинуто:</p>
+<ol>
+<li>Для заполнения использовано не все пространство картинки, а только полезная ее часть, заданная дополнительной маской.</li>
+<li>После созданяи маски на основе контекста, она обединяется с исходной картинкой при помощи градиентной маски.</li>
+</ol>
+<h3 id="_6">Формат входной маски инпаинта</h3>
+<p>Для работы расширения использована двухканальная выходная маска.</p>
+<ol>
+<li>
+<p>Канал 0 (красный) содержит маску инпаинта, задаующую область закраски. Эта маска подобдна классической маске инпаинта, однако она не просто бинарная, а градиентная, что неоходимо для работы второй фичи.</p>
+</li>
+<li>
+<p>Канал 1 (зеленый) содержит маску полезного ихображения, средним значенем которого будет заполнено изображение в области инпаинта, что ползволяет игнорировать цвет фона. </p>
+</li>
+</ol>
+<h3 id="_7">Пример работы режима</h3>
+<p>Рассмотрим работу режима на том же примере - текстурирование яблока.</p>
+<p>Входная маска выглядит так.
+<img alt="Combined mask" src="../images/neuralmaster_input_mask.png" /></p>
+<p>Здесь маски соединены в одно ихобраэение, как написано выше. Вот как выглдядят ее отдельные каналы:</p>
+<p>Канал 0 (red) - маска инпаинта (совпадает со сглаженной маской, использованной выше):<br />
+<img alt="Inpaint mask" src="../images/neuralmaster_internal_mask.png" /></p>
+<p>Канал 1 (green) маска полезного объекта:<br />
+<img alt="External mask" src="../images/neuralmaster_external_mask.png" /></p>
+<p>Внешняя маска выделяет только полезный объект, в данном случае - яблоко.</p>
+<p>Здесь обе маски сгенерированы автоматически при помощи аддона Neural Master для блендера, но он могут быт также созданы и при помощи другх инструментов. </p>
+<p>При помощи этих масок и входного ихображения, получается слудющее ихзображение, которое подается на вход SD:
+<img alt="neuralmaster masked image" src="../images/image_masked_neuralmaster.png" /></p>
+<p>Как виджно, на перефирии маски инпаинта, в оласти ее градиента, изображение совпадает с исходным, а центре оно заполнено красным цветом, усредненным цветом яблока. </p>
+<p>Латентное представление этого изображения: 
+<img alt="neuralmaster masked latent" src="../images/init_latent_neuralmaster.png" /></p>
+<p>Результат инпаинта:
+<img alt="neuralmaster result" src="../images/nm_new_diffuse_texture_neuralmaster.png" /></p>
+<p>Как видим, этот результат получился наиболее качественным.
+Причем, такой результат стабильно воспроизводится при использовании различных значений Seed.</p>
+<p><strong>Примечания</strong> </p>
+<ol>
+<li>Если  красный и зеленый канал входной маски совпадают, используется режим Original, о чем выводится сотвествующее предупреждение в консоль.</li>
+<li>Теоретически, расширение может дать некоторый эффект даже без исопльзованяи второго канала, только за счет градиентной маски. Однако, этот вариант в настоящий момент не использован.</li>
+</ol>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

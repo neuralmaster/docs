@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.neuralmaster.org/panels/main_control_panel/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Main control panel - Neural Master</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Main control panel";
+        var mkdocs_page_input_path = "panels\\main_control_panel.md";
+        var mkdocs_page_url = "/panels/main_control_panel/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+          <a href="../..">
+          <img src="../../img/nm_logo_top.png" class="logo" alt="Logo"/>
+        </a>
+      <div class="wy-side-nav-search"><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../get_started/">Get started</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../how_to_install_sd/">How to install SD</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../nm_inpainter/">SD extention</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../changelog/">Changelog</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../basics/">Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../common_pipeline/">Common pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../support/">Support</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">UI</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../ui_basics/">UI Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_session_panel/">Create session panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../open_session_panel/">Open session panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../camera_panel/">Camera control panel</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Main control panel</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#render-state">Render State</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#camera-setup">Camera Setup</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#settings">Settings</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sd-connection">SD Connection</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#generation-state">Generation State</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#text-to-image-mode">Text to Image Mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#image-to-image-mode">Image to Image Mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#inpaint-mode">Inpaint Mode</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#final-state">Final State</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../render_settings_panel/">Render settings panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sd_connection_panel/">SD connection panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sd_settings_panel/">(NEW) SD settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sd_controlnet_panel/">SD ControlNet panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../layers_panel/">Texture layers panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../player_panel/">Player panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../debug_panel/">Debug panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../inpaint_settings_panel/">(NEW) Inpait Settings panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../inpaint_tools_panel/">(NEW) Inpaint Tools panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../image_selector/">Image settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../addon_settings_page/">Addon preferences</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../integrated_products/">Integrated products</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../contacts/">Contacts</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Neural Master</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">UI</li>
+      <li class="breadcrumb-item active">Main control panel</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="control-panel">Control Panel</h1>
+<p>This is the main panel that controls the creation of a new texture layer.
+It contains the primary control buttons and the most important settings.
+If you are new to NeuralMaster, use this panel, and as you become more familiar, start using more advanced functions from other panels.</p>
+<p>The panel can be in two states, corresponding to different stages of creating a texture layer:
+- Render State
+- Generation State
+- Final State</p>
+<h2 id="render-state">Render State</h2>
+<p><img alt="Render State Control Panel" src="../../img/main_control_panel_render.png" /></p>
+<p>In the Render state, you need to set up the main NeuralMaster camera (default name "nm_camera") properties and some other properties.</p>
+<h3 id="camera-setup">Camera Setup</h3>
+<p>Leverage the full suite of Blender tools to set up the camera. Even for advanced Blender users, we recommend reading the instructions below and using some NeuralMaster features to control the camera.</p>
+<ul>
+<li>The NeuralMaster main camera is locked to the <strong>main 3D view area</strong> of the NeuralMaster workspace, showing the same view that will be sent to and received from Stable Diffusion. You can unlock it by pressing '0' on the numpad, but we advise against it; use the <strong>additional 3D view area</strong> instead for a third-person view.</li>
+<li>Use the <strong>camera type selector</strong> from the <a href="../camera_panel/">Camera Control Panel</a> to choose between "Perspective" and "Orthographic" modes.</li>
+<li><strong>Press and hold the middle mouse button</strong> and move the mouse to rotate the camera around the selected object (by default, it is your textured object).</li>
+<li><strong>Hold 'Shift' and the middle mouse button</strong> and move the mouse to pan the camera.</li>
+<li>Press the <strong>"." key on the numpad</strong> to set the selected object's origin as the pivot point for the camera.</li>
+<li><strong>Scroll the mouse wheel</strong> to adjust the camera distance in Perspective mode.</li>
+<li>Adjust the <strong>scale</strong> parameter in the <a href="../camera_panel/">Camera Control Panel</a> if you're in Orthographic mode.
+(Here it would be more convenient to use the mouse wheel as for perspective camera, but, unfortunately, Blender gives a different behavior).</li>
+<li>Use the <strong>additional 3D view area</strong> to move and rotate the camera like any 3D object using the gizmo.</li>
+<li>Set exact camera values (e.g., for aligning the camera along an axis) in the camera properties.</li>
+</ul>
+<h2 id="settings">Settings</h2>
+<p>Define the texture layer's mode and resolution:
+- <strong>Mode</strong>: Choose from <code>txt2img</code>, <code>img2img</code>, or <code>inpaint</code>, depending on the layer you wish to create.
+- <strong>Render resolution</strong>: Specify the <code>Width</code> and <code>Height</code> for the image.</p>
+<p>Additional SD settings will be requested in the Generation state (see below). Only the settings listed above are required in the Render state.</p>
+<p>After configuring the settings and camera, click <strong>RENDER new layer</strong> to render the diffuse and masks, then proceed to the "Generation" state.</p>
+<p><strong>Note:</strong>
+1. Choose the resolution suitable for your SD version. Consult "best practices" on our site and the official Stable Diffusion documentation for more details.
+2. Even in <code>txt2img</code> mode, rendering is necessary as it creates essential masks (e.g., Normal and Depth masks) for generation.</p>
+<h2 id="sd-connection">SD Connection</h2>
+<p>If an SD connection hasn't been established, the <a href="../sd_connection_panel/">SD Connection Panel</a> will appear after rendering. Enter the URL, login, and password to connect to SD, then move to the Generation State.</p>
+<h2 id="generation-state">Generation State</h2>
+<p>Once rendering is complete and the SD connection is established, the panel enters the Generation state.</p>
+<p>Now, specify the key generation settings and press "Generate layer" to send all source data to SD and receive the result.</p>
+<p>Depending on the selected layer mode, the panel will display different settings.</p>
+<h3 id="text-to-image-mode">Text to Image Mode</h3>
+<p><img alt="Text to Image Mode Control Panel" src="../../img/main_control_panel_txt2img_generate.png" /></p>
+<p>Generates new images based on text description (and also reference image).
+All fields here are common for Stable Diffusion except for the Reference image.</p>
+<ul>
+<li><strong>Prompt</strong>: Enter descriptive text for AI to generate an image.</li>
+<li><strong>Negative</strong>: Enter negative prompts to exclude certain elements.</li>
+<li><strong>Ref image</strong>: Optionally, provide a reference image.</li>
+<li><strong>Seed</strong>: Set a specific seed for reproducibility or <code>-1</code> for randomness.</li>
+</ul>
+<p>Click <strong>GENERATE layer</strong> to initiate the generation process.</p>
+<p>Click <strong>Cancel layer</strong> to stop the generation and return to the <strong>Render State</strong>.</p>
+<p><strong>Note:</strong>
+- <strong>Ref image</strong> is an advanced helper that analyzes your SD configuration to apply the appropriate ControlNet preset based on the selected reference module. For advanced ControlNet configurations, use the <a href="../sd_controlnet_panel/">ControlNet configuration panel</a>.
+- To select reference images and adjust properties (e.g., rotation, inversion), use the <a href="../image_selector/">Image settings</a>.
+- For advanced SD parameter settings, use the <a href="../sd_settings_panel/">SD settings panel</a>.</p>
+<p>You cannot change the layer mode after rendering. If you wish to change the mode while in the <strong>Generation state</strong>, cancel the current layer and create a new one.</p>
+<h3 id="image-to-image-mode">Image to Image Mode</h3>
+<p>In <code>img2img</code> mode, use a render of your 3D model (or another image) as a starting point for texturing. This mode is useful for creating the first texture layer or regenerating all rendered pixels, not just a part.</p>
+<p>This mode includes all <code>txt2img</code> settings plus:
+- <strong>Source image</strong>: Choose the base image for inpainting. The default is the render.
+- <strong>Denoising Strength</strong>: Adjust the degree to which the output matches the source image.</p>
+<p><strong>Note:</strong>
+- <a href="../image_selector/">Image settings</a> ui element is used here to select source and reference images and adjust their properties.
+- The rendered image is used as the default <strong>source image</strong>, but other images can be chosen or modified (e.g., rotated, inverted).
+- Edit the selected image using Blender's image editor (by pressing "Edit" button in image settings element) or any other external 2D editor (by opening the file of the image in the external editor). This mode is similar to Automatic1111 Web UI's Sketch mode but offers more flexibility and power because uf using more powerful 2D editor.
+- For advanced SD parameter settings, use the <a href="../sd_settings_panel/">SD settings panel</a>.</p>
+<h3 id="inpaint-mode">Inpaint Mode</h3>
+<p><img alt="Inpaint Mode Control Panel" src="../../img/main_control_panel_inpaint_generate.png" /></p>
+<p>In Inpaint mode, specify the source image and the areas to be regenerated.
+Only the marked area will be regenerated; the rest will be retained from the source image.</p>
+<p>To edit the Inpaint mask:
+- Click "Edit" in the <strong>inpaint image settings</strong> to open the image in the image editor.
+- The brush will be set to white, allowing you to select areas for inpainting against a black background.
+- Adjust the brush size using standard Blender tools.
+- To overlay the result on the rendered image, set the image as the camera's background using the "Show" button in the <strong>inpaint image settings</strong>.</p>
+<h2 id="final-state">Final State</h2>
+<p>After generating the image from SD, it is automatically applied to the model for preview. Adjust layer properties as described in the <a href="../layers_panel/">Texture Layers Panel</a> to refine the result.</p>
+<p>Choose one of the following actions:  </p>
+<ul>
+<li>Click <strong>ReGENERATE layer</strong> to request a new image from SD and apply it to the model.
+All the generation state settings remain available here (except for camera settings that can be changed on Render state only).  </li>
+<li>Click <strong>Apply</strong> to save the layer in the layers list and start a new layer from the Render state.  </li>
+<li>Click <strong>Cancel</strong> to cancel the current layer and return to the Render state.  </li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../camera_panel/" class="btn btn-neutral float-left" title="Camera control panel"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../render_settings_panel/" class="btn btn-neutral float-right" title="Render settings panel">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../camera_panel/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../render_settings_panel/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

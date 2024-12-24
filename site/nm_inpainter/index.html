@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.neuralmaster.org/nm_inpainter/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>SD extention - Neural Master</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SD extention";
+        var mkdocs_page_input_path = "nm_inpainter\\README.md";
+        var mkdocs_page_url = "/nm_inpainter/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+          <a href="..">
+          <img src="../img/nm_logo_top.png" class="logo" alt="Logo"/>
+        </a>
+      <div class="wy-side-nav-search"><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../get_started/">Get started</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../how_to_install_sd/">How to install SD</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">SD extention</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#problems">Problems</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#source-data">Source data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#original-mode">Original Mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fill-mode">Fill Mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#nothing-mode">Nothing Mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#noise-mode">Noise Mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#conclusion-of-the-experiment">Conclusion of the experiment</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#neural-master-mode">Neural Master mode</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#input-mask-format-of-the-input">Input mask format of the input</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-of-the-mode-operation">Example of the mode operation</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../changelog/">Changelog</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../basics/">Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../common_pipeline/">Common pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../support/">Support</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">UI</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ui_basics/">UI Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/create_session_panel/">Create session panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/open_session_panel/">Open session panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/camera_panel/">Camera control panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/main_control_panel/">Main control panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/render_settings_panel/">Render settings panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/sd_connection_panel/">SD connection panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/sd_settings_panel/">(NEW) SD settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/sd_controlnet_panel/">SD ControlNet panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/layers_panel/">Texture layers panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/player_panel/">Player panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/debug_panel/">Debug panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/inpaint_settings_panel/">(NEW) Inpait Settings panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/inpaint_tools_panel/">(NEW) Inpaint Tools panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/image_selector/">Image settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/addon_settings_page/">Addon preferences</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../integrated_products/">Integrated products</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../contacts/">Contacts</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Neural Master</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">SD extention</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="neural-master-extension-for-automatic1111-web-ui">Neural Master extension for Automatic1111 Web UI</h1>
+<p>The extension is a preprocessor and runs before the main SD loop.
+The extension is compatible with all models, embeddings, controlnet models and other extensions to SD, 
+since it does not concern their internal structure, but only prepares input images for SD.</p>
+<p><img alt="Neural Master Inpainter" src="../img/nm_inpainter_1200_600.png" /></p>
+<p>The extension is most effective in combination with the blender add-on <a href="https://neuralmaster.org/get_started">'Neural Master'</a>,<br />
+which automatically creates the correct masks for its operation.</p>
+<h2 id="installation">Installation</h2>
+<p>Use the standard procedure for installing extensions for Automatic 1111.</p>
+<ol>
+<li>Click to the tab 'Extensions' in the top menu of Automatic 1111 Web UI.  </li>
+<li>Click to the tab "Install from URL".  </li>
+<li>Enter the URL of the extension: <a href="https://github.com/neuralmaster/neuralmaster_inpainter.git">https://github.com/neuralmaster/neuralmaster_inpainter.git</a>  </li>
+<li>Click 'Install' button.  </li>
+<li>Click 'Apply and Restart UI'.</li>
+</ol>
+<h2 id="usage">Usage</h2>
+<ol>
+<li>Select the type of inpainting fill mode 'NeuralMaster'</li>
+<li>Use a two-channel input mask, the format of which is described below.</li>
+</ol>
+<p><strong>Notes</strong></p>
+<p>Using the image editor in the Automatic 1111 web interface, it is impossible to create such a two-channel mask, however, it can be downloaded in the 'Inpaint upload' mode.
+When using the <strong>Blender addon Neural Master</strong>, the mask is created automatically.</p>
+<h2 id="problems">Problems</h2>
+<p>When using the inpainting mode, a pre-prepared image is fed to the SD input, in accordance with the specified inpainting mask and the value of 'Inpainting Fill' parameter.
+That is, Inpainting Fill works as a preprocessor before SD operation.</p>
+<p>There are 4 options for Inpainting Fill available in the Automatic1111 WebUI interface:<br />
+- Fill<br />
+- Original<br />
+- Nothing<br />
+- Noise  </p>
+<p>Let's consider the application of each mode on a specific example of painting the texture of an apple using the Blender add-on 'Neural Master'.</p>
+<h3 id="source-data">Source data</h3>
+<p>We will use the SD 1.5 model, the DPM++ 2M Keras sampler, as well as 3 Controlnet Units: Normal and Depth (to texture tits the 3d model) and IP Adapter to set the reference image.
+As a reference image, we will use some image with an apple, the same in all cases.</p>
+<p>The original 3d model looks like this:</p>
+<p>First, we create a texture for the apple with a frontal camera using 'txt2img'.
+The resulted image is:
+<img alt="Initial image" src="images/source_diffuse_texture.png" /></p>
+<p>Fill the both (front and back) sides of the apple by this texture and turn the camera 90 degrees:
+<img alt="Inpaint source image" src="images/inpaint_source_image.png" /></p>
+<p>As we can see, the texture is very stretched, and in the central part it has absolutely incorrect white color.</p>
+<p>We will try to finish painting this texture in the inpainting mode with two different mask.</p>
+<p>Binary mask:
+<img alt="Inpaint mask" src="images/inpaint_mask_bw.png" /></p>
+<p>The smoothed mask:
+<img alt="Inpaint mask 2" src="images/inpaint_mask.png" /></p>
+<p>(Masks are generated automatically in the NeuralMaster Blender Addon with default settings).</p>
+<h3 id="original-mode">Original Mode</h3>
+<p>The <strong>Original</strong> mode does not modify the image before feeding it to the SD input.</p>
+<p>That is, the same input image is fed to the SD input:
+<img alt="Inpaint source image" src="images/inpaint_source_image.png" /></p>
+<p>The latent representation of which looks like this:</p>
+<p><img alt="Inpaint source latent" src="images/init_latent_original_bw.png" /> (Binary mask)</p>
+<p><img alt="Inpaint source latent" src="images/init_latent_original.png" /> (Smoothed mask)</p>
+<p>As a result of the input, we get:</p>
+<p>When using a binary mask:
+<img alt="Inpaint result" src="images/nm_new_diffuse_texture_original_bw.png" /></p>
+<p>When using a smoothed mask:
+<img alt="Inpaint result" src="images/nm_new_diffuse_texture_original.png" /></p>
+<p>This mode is great if the image you want to finish is already approximately similar to the desired result, and it needs to be improved.
+In our example, we get a fail because SD tries to embed a wide white stripe in the middle into the picture.</p>
+<h3 id="fill-mode">Fill Mode</h3>
+<p>The <strong>Fill</strong> mode fills the image in the input area with some average color of the image (excluding the input area) and feeds it to the SD input.
+Thus, at the output of the Fill preprocessor, we get an image:</p>
+<p>When using a binary mask:
+<img alt="SD source image" src="images/image_masked_fill_bw.png" /></p>
+<p>When using a smoothed mask:
+<img alt="SD source image" src="images/image_masked_fill.png" /></p>
+<p>The latent representation of which looks like this:
+<img alt="SD source latent" src="images/init_latent_fill_bw.png" /> (Binary mask)
+<img alt="SD source latent" src="images/init_latent_fill.png" /> (Smoothed mask)</p>
+<p>As a result of the generation, we get an image:</p>
+<p>When using a binary mask:
+<img alt="SD result" src="images/nm_new_diffuse_texture_fill_bw.png" /></p>
+<p>When using a smoothed mask:
+<img alt="SD result" src="images/nm_new_diffuse_texture_fill.png" /></p>
+<p>The image has a dark gray tint, because the average color of the image takes into account the dark gray background color, and not only the color of the useful object - the apple.</p>
+<p>As a result, the image after the input is also unsatisfactory.</p>
+<h3 id="nothing-mode">Nothing Mode</h3>
+<p>In this mode, the latent  of the image is filled with a neutral color, which looks like this:</p>
+<p><img alt="SD source latent" src="images/init_latent_nothing_bw.png" /> - binary mask
+<img alt="SD source latent" src="images/init_latent_nothing.png" /> - smoothed mask</p>
+<p>As a result of the generation, we get images that are also not of satisfactory quality</p>
+<p>When using a binary mask:
+<img alt="SD result" src="images/nm_new_diffuse_texture_nothing_bw.png" /></p>
+<p>When using a smoothed mask:
+<img alt="SD result" src="images/nm_new_diffuse_texture_nothing.png" /></p>
+<h3 id="noise-mode">Noise Mode</h3>
+<p>The preprocessor <strong>Noise</strong> floods the image in the latent representation with some random noise, which looks like this:</p>
+<p><img alt="SD source latent" src="images/init_latent_noise_bw.png" /> - binary mask
+<img alt="SD source latent" src="images/init_latent_noise.png" /> - smoothed mask</p>
+<p>Usually, this gives something completely terrible, however, in this case, thanks to the IP Adapter, the result is not so bad, but also not satisfactory.</p>
+<p>When using a binary mask:
+<img alt="SD result" src="images/nm_new_diffuse_texture_noise_bw.png" /></p>
+<p>When using a smoothed mask:
+<img alt="SD result" src="images/nm_new_diffuse_texture_noise.png" /></p>
+<h3 id="conclusion-of-the-experiment">Conclusion of the experiment</h3>
+<p>The best result can be achieved by the 'Original' modes (which provides the best joint) and Fill (which uses the context), but they have disadvantages:</p>
+<ol>
+<li>
+<p>'Fill' uses an unnecessary background color when filling, not just the color of the useful object.</p>
+</li>
+<li>
+<p>'Original' uses the incorrect original color because it includes background color.</p>
+</li>
+</ol>
+<h2 id="neural-master-mode">Neural Master mode</h2>
+<p>The new 'NeuralMaster' inpaint mode is designed to correct the listed weak points by filling the inpoint area with a context-dependent image, but more advanced:</p>
+<ol>
+<li>Not the entire space of the image is used for filling, but only the useful part of it, set by an additional mask.</li>
+<li>After creating a context-based mask, it is combined with the original image using a gradient mask.</li>
+</ol>
+<h3 id="input-mask-format-of-the-input">Input mask format of the input</h3>
+<p>A two-channel input mask is used.</p>
+<ol>
+<li>
+<p>Channel 0 (red) contains an input mask that defines the area of the paint. This mask is similar to the classic inpainting mask, but it is not just binary, but gradient, which is necessary for the operation of the second feature listed above.</p>
+</li>
+<li>
+<p>Channel 1 (green) contains a mask of a useful image, the average value of which will fill the image in the input area, which allows you to ignore the background color.</p>
+</li>
+</ol>
+<h3 id="example-of-the-mode-operation">Example of the mode operation</h3>
+<p>Let's look at the operation of the mode using the same example - texturing an apple.</p>
+<p>The input mask looks like this.<br />
+<img alt="Combined mask" src="images/neuralmaster_input_mask.png" /></p>
+<p>Here the masks are combined into one image, as written above. Here's how its individual channels will work:</p>
+<p>Channel 0 (red) - input mask (matches the smoothed mask used above):
+<img alt="Inpaint mask" src="images/neuralmaster_internal_mask.png" /></p>
+<p>Channel 1 (green) mask of the useful object:
+<img alt="External mask" src="images/neuralmaster_external_mask.png" /></p>
+<p>The external mask highlights only a useful object, in this case, an apple.</p>
+<p>Here, both masks are generated automatically using the Neural Master add-on for the Blender, but it can also be created using other tools.</p>
+<p>With the help of these masks and their input image, a matching image is obtained, which is fed to the SD input:
+<img alt="neuralmaster masked image" src="images/image_masked_neuralmaster.png" /></p>
+<p>As you can see, at the periphery of the input mask, in the area of its gradient, the image matches the original one,
+and the center it is filled with red, the middle color of the apple.</p>
+<p>The latent representation of this image is:<br />
+<img alt="neuralmaster masked latent" src="images/init_latent_neuralmaster.png" /></p>
+<p>The result of the generation is: 
+<img alt="neuralmaster result" src="images/nm_new_diffuse_texture_neuralmaster.png" /></p>
+<p>As you can see, this result turned out to be the highest quality.
+Moreover, this result is consistently reproduced when using different Seed values.</p>
+<p><strong>Notes</strong></p>
+<ol>
+<li>If the red and green channels of the input mask match, the Original mode is used, and the following warning is displayed in the console.</li>
+<li>Theoretically, the expansion can give some effect even without using the second channel, only due to the gradient mask. However, this option is currently not used.</li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../how_to_install_sd/" class="btn btn-neutral float-left" title="How to install SD"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../changelog/" class="btn btn-neutral float-right" title="Changelog">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../how_to_install_sd/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../changelog/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

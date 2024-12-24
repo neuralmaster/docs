@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.neuralmaster.org/panels/create_session_panel/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Create session panel - Neural Master</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Create session panel";
+        var mkdocs_page_input_path = "panels\\create_session_panel.md";
+        var mkdocs_page_url = "/panels/create_session_panel/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+          <a href="../..">
+          <img src="../../img/nm_logo_top.png" class="logo" alt="Logo"/>
+        </a>
+      <div class="wy-side-nav-search"><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../get_started/">Get started</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../how_to_install_sd/">How to install SD</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../nm_inpainter/">SD extention</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../changelog/">Changelog</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../basics/">Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../common_pipeline/">Common pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../support/">Support</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">UI</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../ui_basics/">UI Basics</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Create session panel</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#common-ui-elements">Common UI Elements</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#use-color-mode">"Use Color" Mode</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#use-textureuv-mode">"Use Texture+UV" Mode</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../open_session_panel/">Open session panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../camera_panel/">Camera control panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../main_control_panel/">Main control panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../render_settings_panel/">Render settings panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sd_connection_panel/">SD connection panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sd_settings_panel/">(NEW) SD settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sd_controlnet_panel/">SD ControlNet panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../layers_panel/">Texture layers panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../player_panel/">Player panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../debug_panel/">Debug panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../inpaint_settings_panel/">(NEW) Inpait Settings panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../inpaint_tools_panel/">(NEW) Inpaint Tools panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../image_selector/">Image settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../addon_settings_page/">Addon preferences</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../integrated_products/">Integrated products</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../contacts/">Contacts</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Neural Master</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">UI</li>
+      <li class="breadcrumb-item active">Create session panel</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="neural-master-session-initialization-panel">Neural Master Session Initialization Panel</h1>
+<p>This panel is assists in setting up a new texturing session. It accommodates two distinct scenarios depending on the starting point of your texturing process:</p>
+<ul>
+<li>For a mesh without an initial texture, use the "Use Color" mode.</li>
+<li>For a mesh with an existing texture that you wish to enhance, select the "Use Texture+UV" mode.</li>
+</ul>
+<h2 id="common-ui-elements">Common UI Elements</h2>
+<p>Regardless of the mode, you'll encounter these common elements:</p>
+<ol>
+<li><strong>Choose Mesh</strong>: A dropdown menu for selecting the mesh that will be textured.</li>
+<li><strong>How to initialize the texture?</strong>: A dropdown menu providing two initialization methods for the texture:</li>
+<li><strong>Use Color</strong>: Initializes the texture with a uniform color.</li>
+<li><strong>Use Texture+UV</strong>: Initializes the texture based on an existing texture map and corresponding UV layout.</li>
+<li><strong>Select Destination UV</strong>: A dropdown for selecting the UV map that the final texture will use. This UV map is also utilized for creating texture layer masks within NeuralMaster.</li>
+</ol>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>The Destination UV Map must be non-overlapping to ensure the correct creation of the texture.</li>
+<li>The Destination UV Map and mesh are not required to be in their final forms. You can perform further refinements such as subdividing the mesh or adding details during the NeuralMaster session.</li>
+</ul>
+<h2 id="use-color-mode">"Use Color" Mode</h2>
+<p><img alt="Control Panel - Use Color Mode" src="../../img/create_session_color.png" /></p>
+<p>Opt for the "Use Color" mode when starting without any pre-existing texture.<br />
+This mode allows you to fill the object with a chosen color, which acts as the base for subsequent texturing.
+By default, this is set to black, but you can select any color that suits your project's needs.</p>
+<h2 id="use-textureuv-mode">"Use Texture+UV" Mode</h2>
+<p><img alt="Control Panel - Use Texture + UV Mode" src="../../img/create_session_texture.png" /></p>
+<p>The "Use Texture+UV" mode is ideal for refining an existing texture or working from a preliminary texture map.<br />
+This mode requires you to select both the texture image you wish to improve and its associated UV map.
+Note that the source UV map can differ from the final one and may have overlapping areas.</p>
+<p>After setting up the panel according to your needs click <strong>Start new session</strong> to begin the texturing process with NeuralMaster.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../ui_basics/" class="btn btn-neutral float-left" title="UI Basics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../open_session_panel/" class="btn btn-neutral float-right" title="Open session panel">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../ui_basics/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../open_session_panel/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

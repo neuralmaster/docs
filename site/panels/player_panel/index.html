@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.neuralmaster.org/panels/player_panel/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Player panel - Neural Master</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Player panel";
+        var mkdocs_page_input_path = "panels\\player_panel.md";
+        var mkdocs_page_url = "/panels/player_panel/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+          <a href="../..">
+          <img src="../../img/nm_logo_top.png" class="logo" alt="Logo"/>
+        </a>
+      <div class="wy-side-nav-search"><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../get_started/">Get started</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../how_to_install_sd/">How to install SD</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../nm_inpainter/">SD extention</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../changelog/">Changelog</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../basics/">Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../common_pipeline/">Common pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../support/">Support</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">UI</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../ui_basics/">UI Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_session_panel/">Create session panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../open_session_panel/">Open session panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../camera_panel/">Camera control panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../main_control_panel/">Main control panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../render_settings_panel/">Render settings panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sd_connection_panel/">SD connection panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sd_settings_panel/">(NEW) SD settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sd_controlnet_panel/">SD ControlNet panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../layers_panel/">Texture layers panel</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Player panel</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#settings">Settings</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#playback-controls">Playback Controls</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sequence-information">Sequence Information</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../debug_panel/">Debug panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../inpaint_settings_panel/">(NEW) Inpait Settings panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../inpaint_tools_panel/">(NEW) Inpaint Tools panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../image_selector/">Image settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../addon_settings_page/">Addon preferences</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../integrated_products/">Integrated products</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../contacts/">Contacts</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Neural Master</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">UI</li>
+      <li class="breadcrumb-item active">Player panel</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="player-panel">Player Panel</h1>
+<p>NeuralMaster includes a bonus feature called "Player" for creating a video about the texturing process.<br />
+The Player plays and records the texturing process by applying each layer step by step from the layers list and smoothly transitions the camera between them.</p>
+<p>The Player supports two modes:<br />
+- <strong>Play</strong>: In this mode, the movie will only play on the screen and will not be recorded to disk.<br />
+- <strong>Record</strong>: Plays the movie and records each step as an image in a special folder. By default, the folder's name is "//player," but you can change it in the nm3d file.  </p>
+<p>Below is an example of a movie (from 00:37) created using this feature.</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+          src="https://www.youtube.com/embed/b9qeVCmwJ2c" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+  </iframe>
+</div>
+
+<p><strong>Note</strong><br />
+The Player's actions are potentially destructive because they delete and restore shot layers.<br />
+<strong>Please back up all data (blend file, nm3d file, and the "images" subfolder) before using the Player</strong>!</p>
+<p><img alt="Player Panel" src="../../img/player_panel.png" /></p>
+<h2 id="settings">Settings</h2>
+<p>Two options are available here:  <br />
+- <strong>Frames per layer</strong>: Determines the number of frames created for each layer during video recording. The default value is 24.<br />
+- <strong>Seconds per frame</strong>: Indicates the duration each frame is displayed on the screen during playback. If a frame takes longer to render than this value, the playback will not be interrupted; instead, the next frame will start immediately.</p>
+<h2 id="playback-controls">Playback Controls</h2>
+<p>Use the following playback controls:</p>
+<ul>
+<li><strong>Rewind Button</strong>: Resets the Player to the <strong>start layer</strong>.</li>
+<li><strong>Record Button</strong>: Records the texturing process by playing the movie and rendering each frame to the Player's special subfolder.</li>
+<li><strong>Play Button</strong>: Plays the movie within Blender without rendering.</li>
+<li><strong>Pause Button</strong>: Halts the playback without rewinding. You can resume playing or recording by pressing Record or Play again.</li>
+<li><strong>Step Forward Button</strong>: Stops playing and rewinds the Player.</li>
+</ul>
+<h2 id="sequence-information">Sequence Information</h2>
+<p>Below the playback controls, you'll find information about the current, start, and end layers:</p>
+<ul>
+<li><strong>Index</strong> row: Displays the current, start, and end indices in the sequence.</li>
+<li><strong>ID</strong> row: Lists the unique identifiers for the current, start, and end texture layers, corresponding to the indices above.</li>
+</ul>
+<p>You can modify the indices for the current, start, and end layers here and view the corresponding IDs.</p>
+<p><strong>Note</strong> <br />
+- By default, the Player will include all completed layers available in the player's list, including active and archived layers.<br />
+- You can exclude a layer from the Player by using the "skip playing" option described in the <a href="../layers_panel/">Texture Layers Panel</a>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../layers_panel/" class="btn btn-neutral float-left" title="Texture layers panel"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../debug_panel/" class="btn btn-neutral float-right" title="Debug panel">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../layers_panel/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../debug_panel/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.neuralmaster.org/panels/sd_settings_panel/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>(NEW) SD settings - Neural Master</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "(NEW) SD settings";
+        var mkdocs_page_input_path = "panels\\sd_settings_panel.md";
+        var mkdocs_page_url = "/panels/sd_settings_panel/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+          <a href="../..">
+          <img src="../../img/nm_logo_top.png" class="logo" alt="Logo"/>
+        </a>
+      <div class="wy-side-nav-search"><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../get_started/">Get started</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../how_to_install_sd/">How to install SD</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../nm_inpainter/">SD extention</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../changelog/">Changelog</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../basics/">Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../common_pipeline/">Common pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../support/">Support</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">UI</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../ui_basics/">UI Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_session_panel/">Create session panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../open_session_panel/">Open session panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../camera_panel/">Camera control panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../main_control_panel/">Main control panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../render_settings_panel/">Render settings panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sd_connection_panel/">SD connection panel</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">(NEW) SD settings</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#model-selection">Model Selection</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#prompt-settings">Prompt Settings</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#image-and-mask-settings">Image and Mask Settings</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#seed-settings">Seed Settings</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#generation-settings">Generation Settings</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#inpaint-settings">Inpaint Settings</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sd_controlnet_panel/">SD ControlNet panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../layers_panel/">Texture layers panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../player_panel/">Player panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../debug_panel/">Debug panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../inpaint_settings_panel/">(NEW) Inpait Settings panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../inpaint_tools_panel/">(NEW) Inpaint Tools panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../image_selector/">Image settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../addon_settings_page/">Addon preferences</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../integrated_products/">Integrated products</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../contacts/">Contacts</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Neural Master</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">UI</li>
+      <li class="breadcrumb-item active">(NEW) SD settings</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="sd-settings-panel">SD Settings Panel</h1>
+<p>NeuralMaster uses Stable Diffusion WebUI Automatic1111 to generate images.<br />
+Standard parameters of Automatic1111 are used, and original names are preserved.<br />
+This page provides short information on how to use each SD setting.<br />
+Please refer to the Automatic1111 documentation for detailed information.</p>
+<p><img alt="Image settings" src="../../img/sd_settings_panel_full.png" /></p>
+<h2 id="model-selection">Model Selection</h2>
+<p><strong>Model</strong><br />
+Select the desired version of the Stable Diffusion model from the dropdown. The model file, such as <code>SDv1.5.ckpt</code>, represents a saved state of the model that can be loaded and used for image generation.</p>
+<h2 id="prompt-settings">Prompt Settings</h2>
+<p><strong>Prompt</strong><br />
+Enter a text description in this field. The AI uses this description as guidance to generate the corresponding image. For instance, entering "Night street" will instruct the AI to create an image depicting a street scene during nighttime.</p>
+<p><strong>Negative Prompt</strong><br />
+Negative prompting is specifying what you don't want in your image.
+It's usually not a bad idea to add the following here: "blur, metallic, specular, transparent, reflection". </p>
+<h2 id="image-and-mask-settings">Image and Mask Settings</h2>
+<p>To select images and set some of their properties (for example, rotation or color inversion), the universal UI element <a href="../image_selector/">Image settings</a> is used.</p>
+<p><strong>Source Image</strong><br />
+This item is available only in the "img2img" and "inpaint" modes.<br />
+Upload an image here if you want to use it as a reference or starting point for the AI during image generation.</p>
+<p><strong>Inpaint Mask</strong><br />
+This item is only available in the "inpaint" mode.<br />
+Define areas in the source image that the AI should modify or fill in.</p>
+<h2 id="seed-settings">Seed Settings</h2>
+<p><strong>Seed</strong><br />
+Controls the randomness of the image generation.<br />
+Entering a specific number will allow you to reproduce the same results given the same settings.<br />
+A value of '-1' means a random seed will be used each time.<br />
+Use the "-1" button to set the seed to "-1".<br />
+Use the button with the "triangle" icon on the right to select one of the seeds used in the past.</p>
+<h2 id="generation-settings">Generation Settings</h2>
+<p><strong>Denoising Strength</strong><br />
+This item is available only in the "img2img" and "inpaint" modes.<br />
+Using this setting, adjust the degree to which the generated output matches the input image specified by the parameter "Input image".</p>
+<p><strong>Sampler</strong><br />
+Choose the algorithm for sampling during the image generation process.<br />
+Multiple sampler algorithms exist, and your SD host can support many of them.<br />
+<code>DPM++ 2M Karras</code> is one of the more popular and optimal by speed and quality, and we recommend it for starters.</p>
+<p><strong>Width/Height</strong><br />
+Set the dimensions of the output image in pixels.<br />
+By default, the same dimensions that were used for rendering are used, and you don't need to change them.<br />
+But if you are an advanced user and understand well how SD works, you can adjust it here.</p>
+<p><strong>Steps</strong><br />
+The number of refinement iterations the model will perform.<br />
+More steps can lead to a more detailed and polished image, but on the other hand, the more steps, the longer the AI takes to create the image.<br />
+Therefore, you need to choose a compromise value.<br />
+When you use the <code>DPM++ 2M Karras</code> sampler, a value of 10-20 is often enough.<br />
+But if you use multiple controlnet units, it's recommended to increment "Steps" by +5...10 for every controlnet unit.</p>
+<p><strong>Cfg scale</strong><br />
+The most mysterious SD parameter.<br />
+On the Internet, you can find many attempts to explain in simple terms how this parameter works, but it seems that they all failed.<br />
+Even the range of possible parameter values - from 1 to 25 - looks strange in itself.<br />
+In a practical sense, it is important that this parameter somehow affects the style of the image.<br />
+Values around 7 (for some reason) create an image that is close to photorealism, while small values close to 1 or large values close to 21 tend toward abstraction.<br />
+Beginners are advised not to touch it.</p>
+<h2 id="inpaint-settings">Inpaint Settings</h2>
+<p>The following settings are only available in the "inpaint" mode.</p>
+<p><strong>Mask Blur</strong><br />
+Control the sharpness of the inpaint mask's edges. Higher values create a softer transition between the inpainted area and the rest of the image.<br />
+When working with NeuralMaster, you usually do not need to change the value of this parameter,<br />
+because the Blender expression editor is already used to create the mask, and the brush you use already creates a smoothed mask.</p>
+<p>You can blur the inpainting mask manually if you use smoothed brush for painting teh mask or use 'Smoot' from <a href="../inpaint_tools_panel/">Inpainting tools</a>. In this case you can set this option to 0.</p>
+<p><strong>Mask mode</strong><br />
+This setting dictates how the mask is applied to the image. Two items are available here: "Masked" and "Not Masked".<br />
+By default, "Not Masked" is used, which can look strange.<br />
+The reason is that NeuralMaster uses white color to show the masked area (it is more convenient for painting), but SD uses black.<br />
+If you want to use the "Masked" SD mode here, you can do it, but you also need to invert the inpaint mask colors using the checkbox "invert" in the inpaint image settings.</p>
+<p><strong>(NEW) Masked area</strong>  </p>
+<p>Shows the area that will be used for control of generation in inpaint mode.<br />
+There are 4 available values:</p>
+<ul>
+<li><strong>Original</strong> - uses the image "under" the inpaint mask as a control image for generation.  </li>
+<li><strong>Fill</strong> - uses an image generated from all the pixels excluding masked areas as a control image for generation.  </li>
+<li><strong>Noise</strong> - uses a random image as a control image for generation.  </li>
+<li><strong>Nothing</strong> - uses an empty image as a control image for generation.</li>
+<li><strong>(NEW) Neural Master</strong> - is and innovative mode that is allowed here if the extension <a href="../../nm_inpainter/">"Neural Master Inpainter"</a> is installed to the host of Automatic 1111</li>
+</ul>
+<p>We recommend you to use <strong>Neural Master</strong> mode if the texture inside the inpainting area is significantly incorrect (for example, contains absolutely wrong colors).</p>
+<p><strong>Original</strong> mode can be used if the image "under" the inpaint mask is pretty good, but you want to improve it (using your prompt and ControlNet masks).</p>
+<p><strong>Noise</strong> and <strong>Nothing</strong> usually can't be applicable for texturing because they significantly modify the image and don't maintain the consistency of the texture. 
+But if you use a very strong prompt or a strong reference image or Lora to keep the consistency, then "Noise" or "Nothing" sometimes can help you to generate some interesting details on your texture.</p>
+<p><strong>Inpaint area</strong>  </p>
+<p>Determines which area of the image will be analyzed during inpainting.<br />
+There are two options here: 'Whole picture' and 'Only masked'.<br />
+Since the goal when texturing is to preserve the consistency of the image, when inpainting it is necessary to analyze the image as a whole.<br />
+Therefore, in the vast majority of cases, it is recommended to use 'Whole picture'.</p>
+<p>Please refer to the Automatic1111 documentation for detailed information.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../sd_connection_panel/" class="btn btn-neutral float-left" title="SD connection panel"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../sd_controlnet_panel/" class="btn btn-neutral float-right" title="SD ControlNet panel">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../sd_connection_panel/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../sd_controlnet_panel/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

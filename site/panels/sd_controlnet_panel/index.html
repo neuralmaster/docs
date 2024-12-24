@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.neuralmaster.org/panels/sd_controlnet_panel/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>SD ControlNet panel - Neural Master</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SD ControlNet panel";
+        var mkdocs_page_input_path = "panels\\sd_controlnet_panel.md";
+        var mkdocs_page_url = "/panels/sd_controlnet_panel/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+          <a href="../..">
+          <img src="../../img/nm_logo_top.png" class="logo" alt="Logo"/>
+        </a>
+      <div class="wy-side-nav-search"><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../get_started/">Get started</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../how_to_install_sd/">How to install SD</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../nm_inpainter/">SD extention</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../changelog/">Changelog</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../basics/">Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../common_pipeline/">Common pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../support/">Support</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">UI</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../ui_basics/">UI Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_session_panel/">Create session panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../open_session_panel/">Open session panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../camera_panel/">Camera control panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../main_control_panel/">Main control panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../render_settings_panel/">Render settings panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sd_connection_panel/">SD connection panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sd_settings_panel/">(NEW) SD settings</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">SD ControlNet panel</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#controlnet-panel-view">ControlNet Panel View</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#preset-management">Preset Management</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#controlnet-units">ControlNet Units</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#expanded-controlnet-unit-view">Expanded ControlNet Unit View</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#custom-module-settings">Custom Module Settings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#image-settings">Image Settings</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#preprocessing-parameters">Preprocessing Parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#weighting-and-guidance">Weighting and Guidance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#control-mode">Control mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#other-options">Other Options</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#remove-this-unit">Remove this unit</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../layers_panel/">Texture layers panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../player_panel/">Player panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../debug_panel/">Debug panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../inpaint_settings_panel/">(NEW) Inpait Settings panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../inpaint_tools_panel/">(NEW) Inpaint Tools panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../image_selector/">Image settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../addon_settings_page/">Addon preferences</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../integrated_products/">Integrated products</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../contacts/">Contacts</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Neural Master</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">UI</li>
+      <li class="breadcrumb-item active">SD ControlNet panel</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="sd-controlnet-panel">SD ControlNet Panel</h1>
+<p>This panel is designed for configuring ControlNet - an advanced add-on for Stable Diffusion that provides enhanced control over image generation.<br />
+Thanks to ControlNet technology, it is possible to generate textures that precisely fit 3D models, that is achieved using two ControlNet models: a depth mask and a normal mask.<br />
+Furthermore, ControlNet significantly contributes to the maintenance of consistency across the entire surface of a texture by utilizing the IP adapter and reference model.</p>
+<h2 id="controlnet-panel-view">ControlNet Panel View</h2>
+<p><img alt="ControlNet Panel" src="../../img/controlnet_panel.png" /></p>
+<p>When generating textures, you may use several ControlNet units; typically, 2 to 5 units are used when working with NeuralMaster.<br />
+The ControlNet panel enables you to add and configure ControlNet units, save settings as presets, and manage these presets.</p>
+<h3 id="preset-management">Preset Management</h3>
+<ul>
+<li><strong>Preset</strong>: Displays the currently selected preset in the dropdown menu.  </li>
+<li><strong>Load</strong>: Loads the selected preset.</li>
+<li><strong>Save to selected</strong>: Saves the current settings to the selected preset.</li>
+<li><strong>Save to new</strong>: Saves the current settings as a new preset. Upon clicking this button, a window will prompt you to enter a name for the new preset.</li>
+<li><strong>Delete selected</strong>: Removes the selected preset from the list.</li>
+<li><strong>Rename selected</strong>: Changes the name of the selected preset. Clicking this button opens a window where you can enter a new name for the preset.</li>
+</ul>
+<h3 id="controlnet-units">ControlNet Units</h3>
+<p>Below the presets is a list of ControlNet units. Here you can create, delete, and adjust them.</p>
+<p>Each unit's settings can be collapsed or expanded.<br />
+In collapsed mode, you can see the unit's name and enable or disable it using the checkbox on the right.
+The image above shows two configured ControlNet units, <strong>Depth</strong> and <strong>Normal</strong>, both in collapsed mode.<br />
+<strong>Add ControlNet Unit</strong>: Creates a new ControlNet unit.</p>
+<h2 id="expanded-controlnet-unit-view">Expanded ControlNet Unit View</h2>
+<p><img alt="Expanded ControlNet Unit" src="../../img/controlnet_unit_expanded.png" /></p>
+<p>The expanded view of a ControlNet unit provides a comprehensive set of options that allow you to fine-tune how the AI interprets and manipulates the input data.<br />
+Standard parameters of the Automatic1111 web UI are used, preserving their original names.<br />
+Please refer to the original Automatic1111 documentation for more detailed information.</p>
+<h3 id="custom-module-settings">Custom Module Settings</h3>
+<ul>
+<li><strong>Custom name</strong>: A custom string typed by the user, displayed in the title of the Unit. In the example, it's named "Canny".</li>
+<li><strong>Preprocessor</strong>: Choose a preprocessor type from the dropdown, which in this case is set to "canny".</li>
+<li><strong>Module</strong>: Select the module version for the unit. The example shows the <code>Canny</code> model.</li>
+</ul>
+<p>If the ControlNet Unit uses masks generated by NeuralMaster (for example, a Depth map or Normal map), do not choose a preprocessor!<br />
+However, in some cases, you must use a preprocessor to generate a control mask from your diffuse texture or any other source mask.<br />
+For example, you can create a Canny mask from a Fresnel mask (generated by NeuralMaster) using the 'canny' preprocessor - this is one of the available methods to maintain consistency between the mesh and texture. </p>
+<h3 id="image-settings">Image Settings</h3>
+<p>To select images and set some of their properties (for example, rotation or color inversion), the universal UI element <a href="../image_selector/">Image settings</a> is used.</p>
+<p><strong>Input image</strong><br />
+This ui element allows you to select the input image for this particular unit.</p>
+<p><strong>Expand range in inpaint area (inpaint only)</strong><br />
+An option to broaden the area affected by inpainting, applicable only in inpaint mode.</p>
+<p><strong>Mask image (advanced users only!)</strong><br />
+The ControlNet unit receives two images as input - the input image and the mask image - but usually, only the first is used. 
+- If the preprocessor is enabled, then the input image goes to the preprocessor, and the preprocessor's output goes to the ControlNet model's input.
+- If the preprocessor is disabled, then the input image goes directly to the ControlNet model's input.</p>
+<p>In some advanced cases, you can set both the input image and mask image, and in this case, you understand it better than the author of this instruction.
+Please do not set the mask image if you do not understand how it works.</p>
+<p>A dropdown to select a mask image that the unit will use to define areas of interest or exclusion.</p>
+<h3 id="preprocessing-parameters">Preprocessing Parameters</h3>
+<ul>
+<li><strong>Preprocessor resolution</strong>: Defines the resolution at which the preprocessor operates.</li>
+<li><strong>Preprocessor threshold A</strong>: The first threshold parameter for the preprocessor algorithm.</li>
+<li><strong>Preprocessor threshold B</strong>: The second threshold parameter for the preprocessor algorithm.</li>
+</ul>
+<p>The values of <strong>Preprocessor threshold A</strong> and <strong>Preprocessor threshold B</strong> depend on the type of preprocessor and can be very different.
+For some preprocessors, values from 0 to 1 are possible, but for others, they range from 0 to 255.</p>
+<h3 id="weighting-and-guidance">Weighting and Guidance</h3>
+<ul>
+<li><strong>Weight</strong>: Sets the influence weight of this unit on the final image.</li>
+<li><strong>Guidance</strong>: Adjusts the guidance strength, which affects how strictly the generated image follows the input parameters.</li>
+<li><strong>Starting step</strong>: Determines the step at which this unit begins influencing the generation.</li>
+<li><strong>Ending step</strong>: Sets the step at which this unit ceases influencing the generation.</li>
+</ul>
+<h3 id="control-mode">Control mode</h3>
+<p><strong>Control mode</strong> dropdown options:<br />
+- <strong>Balanced</strong>: Balances your written prompt with ControlNet. Similar to the previous version's non-activated Guess Mode.<br />
+- <strong>My prompt is more important</strong>: Focuses more on your prompt, reducing ControlNet's influence. Your prompt details will be more prominent in the image.<br />
+- <strong>ControlNet is more important</strong>: Increases ControlNet's influence based on your CFG Scale. For example, at a CFG Scale of 7, ControlNet is 7 times stronger, allowing it to interpret and add details not specified in your prompt.  </p>
+<h3 id="other-options">Other Options</h3>
+<ul>
+<li><strong>Low VRAM</strong>: Allows ControlNet to function with less than 6GB of VRAM, at the expense of processing speed.</li>
+<li><strong>Pixel Perfect</strong>: When checked, automatically calculates the correct Preprocessor resolution for the input image (more details below!)</li>
+<li><strong>Resize mode</strong>: Defines how images are resized, with "Just Resize" being one of the options.</li>
+</ul>
+<h3 id="remove-this-unit">Remove this unit</h3>
+<p>This button allows you to delete the current unit from the configuration.  </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../sd_settings_panel/" class="btn btn-neutral float-left" title="(NEW) SD settings"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../layers_panel/" class="btn btn-neutral float-right" title="Texture layers panel">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../sd_settings_panel/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../layers_panel/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

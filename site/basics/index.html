@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.neuralmaster.org/basics/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Basics - Neural Master</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Basics";
+        var mkdocs_page_input_path = "basics.md";
+        var mkdocs_page_url = "/basics/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+          <a href="..">
+          <img src="../img/nm_logo_top.png" class="logo" alt="Logo"/>
+        </a>
+      <div class="wy-side-nav-search"><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../get_started/">Get started</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../how_to_install_sd/">How to install SD</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../nm_inpainter/">SD extention</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../changelog/">Changelog</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Basics</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#general-principles">General principles</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-a-texture-layer">Creating a texture layer</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-configure-render-parameters">1. Configure render parameters.</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-click-the-render-layer-button">2. Click the Render layer button</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-configure-stable-diffusion-generation-parameters">3. Configure Stable Diffusion generation parameters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-click-the-generate-layer-button">4. Click the Generate layer button</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-apply-result">5. Apply result</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#baking-multiple-layers-into-an-overall-texture">Baking multiple layers into an overall texture</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#notes">Notes</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../common_pipeline/">Common pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../support/">Support</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">UI</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ui_basics/">UI Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/create_session_panel/">Create session panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/open_session_panel/">Open session panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/camera_panel/">Camera control panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/main_control_panel/">Main control panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/render_settings_panel/">Render settings panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/sd_connection_panel/">SD connection panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/sd_settings_panel/">(NEW) SD settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/sd_controlnet_panel/">SD ControlNet panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/layers_panel/">Texture layers panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/player_panel/">Player panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/debug_panel/">Debug panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/inpaint_settings_panel/">(NEW) Inpait Settings panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/inpaint_tools_panel/">(NEW) Inpaint Tools panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/image_selector/">Image settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/addon_settings_page/">Addon preferences</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../integrated_products/">Integrated products</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../contacts/">Contacts</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Neural Master</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">User Guide</li>
+      <li class="breadcrumb-item active">Basics</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="basics">Basics</h1>
+<h2 id="general-principles">General principles</h2>
+<p>Texturing using Neural Master is a sequential synthesis of the model’s texture from pictures, created from different views, and then combining them into a single texture.<br />
+That is, the well-known, widespread technique of projection texturing is used here.
+Such texture fragments are called <strong>texture layers</strong> in NeuralMaster.</p>
+<p>To create the texture layer, you need to perform 2 operations: </p>
+<ol>
+<li>Set the camera to the desired position and render the model.  </li>
+<li>Use Stable Diffusion to create a fragment of a texture.  </li>
+</ol>
+<p>After creating the layer, you need to move the camera to a new area of the model, and create a new texture layer, etc.<br />
+The layers are layered on top of each other sequentially to create an overall texture.</p>
+<p>When creating each texture layer, it is very important to achieve the so-called <strong>consistency</strong>, that is, its correct joining with other texture layers so that the model looks uniform and harmonious.
+Stable Diffusion was not originally designed to solve this problem, but there are a number of extensions for SD, as well as a number of techniques that allow you to achieve good consistency.<br />
+Some of them are described in the <a href="../common_pipeline/">Common Pipeline</a> section, as well as in the <a href="../faq/">FAQ</a> section, which will be constantly updated.</p>
+<p>After multiple layers are created, they are baked into one overall texture using the final UV coordinates.</p>
+<h2 id="creating-a-texture-layer">Creating a texture layer</h2>
+<h3 id="1-configure-render-parameters">1. Configure render parameters.</h3>
+<ol>
+<li>
+<p>Texture layer type:<br />
+<strong>txt2txt</strong> - frame generation only based on a text prompt. Typically used for the initial layer<br />
+<strong>img2img</strong> - frame generation based on render. Often used for the initial layer, as well as for texturing symmetrical areas of the texture.<br />
+<strong>inpaint</strong> - detailing of a frame fragment in the selected area.</p>
+</li>
+<li>
+<p>Camera type, its parameters and position.<br />
+2 camera types are supported - perspective and orthogonal.<br />
+We recommend to use usually an orthogonal camera.<br />
+Tips for setting this parameter are given in <a href="../faq/">FAQ</a>.</p>
+</li>
+<li>Render resolution.<br />
+As a rule, it is better to use the resolution that is optimal for the selected Stable Diffusion model. See our recommendations in <a href="../faq/">FAQ</a>.</li>
+</ol>
+<h3 id="2-click-the-render-layer-button">2. Click the Render layer button</h3>
+<p>At this stage, not only the diffuse texture render is created, but also many different masks for Stable Diffusion and for combining texture layers.
+(see details in the description of the <a href="../panels/render_settings_panel/">Render Settings</a> window).<br />
+In addition, a special UV layer is created for the resulting image.</p>
+<p>Render duration ranges from fractions to several tens of seconds, depending on the performance of your computer and the selected render parameters.
+During this time, the main Blender thread will be blocked and it may appear frozen. This is normal, don't worry.</p>
+<h3 id="3-configure-stable-diffusion-generation-parameters">3. Configure Stable Diffusion generation parameters</h3>
+<p>Including: propmpt, negative prompt, seed, denoising strength, input image, inpaint mask, CFG Scale, ControlNet parameters and much more.
+Currently, almost all parameters used in Automation are supported, except upscaler and refiner.
+(some parameters cannot be configured through the NeuralMaster, however, they can be enabled via the website and used in NeuralMaster).</p>
+<p>Please give the feedback what parameters of Stable Diffusion you would like to see in the NeuralMaster.</p>
+<h3 id="4-click-the-generate-layer-button">4. Click the Generate layer button</h3>
+<p>The button starts generation in Stable Diffusion.
+This operation is also lengthy, and can last from seconds to several minutes, depending on the selected frame parameters,
+in which the main Blender thread will be blocked and it may appear to be frozen.</p>
+<h3 id="5-apply-result">5. Apply result</h3>
+<p>After generation, you need to look at the result, and if it is satisfactory, save it by clicking the Apply button.
+If you are not satisfied with the result, you need to change the generation settings and click the Generate button again.
+You can also cancel the layer at any time and return to the camera settings stage.</p>
+<h2 id="baking-multiple-layers-into-an-overall-texture">Baking multiple layers into an overall texture</h2>
+<p>Baking texture layers into a single "fusion" layer is done in the <a href="../panels/layers_panel/">layer editor</a>.
+The window displays a list of all texture layers created previously, and you can see that layers can be of 3 types:</p>
+<ol>
+<li><strong>Initial</strong> - the initial layer created when the NeuralMaster session was initialized</li>
+<li><strong>Shot</strong> - layer created using a neural network</li>
+<li><strong>Fusion</strong> - A layer obtained by baking a combination of several other layers</li>
+</ol>
+<p>The checkboxes highlight exactly those texture layers that are currently displayed on the model.
+By checking and unchecking the checkboxes, you can activate or deactivate each layer.</p>
+<p>To create a new fusion layer, you need to check the required layers (as a rule, these are all layers of the Shot type,
+as well as the one Initial or Fusion layer preceding them), and then press the fusion button.
+After clicking the button, a pop-up window will appear where you need to select the resolution of the resulting texture.
+The duration of the operation depends on the resolution of the selected texture and the performance of your video card, and can last from a second to several minutes.</p>
+<p>After creating a shared layer, all baked Shot layers will be marked as archived and hidden from the list.
+The UV coordinates of all these layers will also be removed, so new Shot layers can be created.</p>
+<h3 id="notes">Notes</h3>
+<ol>
+<li>Unfortunately, Blender does not allow you to create more than 8 UV coordinates for one mesh, so you need to bake the overall one after creating the 7th texture layers (the 8th UV will always be used for your final UV).
+However, this is not burdensome and is even useful, since too many active texture layers can cause performance problems. And besides, when baking the texture into the final one, a loss of quality may occur, and therefore, it is sometimes useful to see the intermediate result.</li>
+<li>All archived layers can be restored later, if necessary, as described in the description of the <a href="../panels/layers_panel/">layer editor</a>.</li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../faq/" class="btn btn-neutral float-left" title="FAQ"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../common_pipeline/" class="btn btn-neutral float-right" title="Common pipeline">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../faq/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../common_pipeline/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

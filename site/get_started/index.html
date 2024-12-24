@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.neuralmaster.org/get_started/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Get started - Neural Master</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Get started";
+        var mkdocs_page_input_path = "get_started.md";
+        var mkdocs_page_url = "/get_started/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+          <a href="..">
+          <img src="../img/nm_logo_top.png" class="logo" alt="Logo"/>
+        </a>
+      <div class="wy-side-nav-search"><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Get started</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#download-and-install">Download and install</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#download">Download</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#install-addon">Install addon</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#install-additional-components">Install additional components</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#create-3d-model-and-uv">Create 3d model and UV</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#notes">Notes</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#intialize-neural-master-session">Intialize Neural Master session</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#start-stable-diffusion">Start Stable Diffusion</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#texture-the-model-using-neuralmaster">Texture the model using NeuralMaster</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../how_to_install_sd/">How to install SD</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../nm_inpainter/">SD extention</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../changelog/">Changelog</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../basics/">Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../common_pipeline/">Common pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../support/">Support</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">UI</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ui_basics/">UI Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/create_session_panel/">Create session panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/open_session_panel/">Open session panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/camera_panel/">Camera control panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/main_control_panel/">Main control panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/render_settings_panel/">Render settings panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/sd_connection_panel/">SD connection panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/sd_settings_panel/">(NEW) SD settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/sd_controlnet_panel/">SD ControlNet panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/layers_panel/">Texture layers panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/player_panel/">Player panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/debug_panel/">Debug panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/inpaint_settings_panel/">(NEW) Inpait Settings panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/inpaint_tools_panel/">(NEW) Inpaint Tools panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/image_selector/">Image settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/addon_settings_page/">Addon preferences</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../integrated_products/">Integrated products</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../contacts/">Contacts</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Neural Master</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Get started</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="get-started">Get started</h1>
+<h2 id="download-and-install">Download and install</h2>
+<h3 id="download">Download</h3>
+<p>NeuralMaster addon is avaliable on two stores:</p>
+<ul>
+<li><a href="https://blendermarket.com/products/neuralmaster">Blendermarket</a></li>
+<li><a href="https://nmaster.gumroad.com/l/neuralmaster">Gumroad</a></li>
+</ul>
+<p>After buying you will download addon as zip file.
+Do not unpack it but only place it on some folder as you convenient. </p>
+<p>The process of installation is mainly typical excluding installing additional components.</p>
+<h3 id="install-addon">Install addon</h3>
+<p>Tthe process is the same of installation any addon for Blender. </p>
+<ol>
+<li>Open preference window by selecting menu item Edit -&gt; Preferences.</li>
+<li>Open addons list by selecting the item 'Add-ons' in the left part of window.</li>
+<li>Press 'Install' button in the top right corner of window.</li>
+<li>Select zip file downloaded above using standard dialog window.</li>
+<li>Enable the addon by checking the checkbox near its title.</li>
+</ol>
+<h3 id="install-additional-components">Install additional components</h3>
+<p>This stage is not typical.<br></p>
+<p>NeuralMaster required some Python libraries that are not installed in Blender by default.<br />
+The addons page contains a special button to install these components.</p>
+<ol>
+<li>Expand addons setting by pressing the "triangle" button near the title as you can see bellow<br />
+<img alt="Modules installed" src="../img/addon_settings_collapsed.png" /></li>
+<li>If some components not found you will see the list of these components and the button "Install required modules". Press the button<br />
+<img alt="Modules installed" src="../img/addon_settings_modules_reuired.png" /></li>
+<li>Restart Blender and open NeuralMaster addon page again to understand that all the modules installed:<br />
+<img alt="Modules installed" src="../img/addon_settings_modules_installed.png" /></li>
+</ol>
+<p>If you have problems of installation please follow <a href="../cant_install_pil/">the instruction</a>  </p>
+<h2 id="create-3d-model-and-uv">Create 3d model and UV</h2>
+<p>Addon Neural Master is intended for texturing but not for UV-mapping and modeling.<br />
+So you need to have a 3d model and UV map to texture it.  </p>
+<p>Also, you can have some rough initially texture before starting Neural Master because in some cases it can improve the consistency of the final texture or decrease the quantity of iterations.  </p>
+<h3 id="notes">Notes</h3>
+<ol>
+<li>
+<p>At the moment Neural Master supports only NONE overlapped UV map</p>
+</li>
+<li>
+<p>The 3d model can be not fully complete - small details of mesh can be detailed during texturing if they do not influence the project UV in any point of view.   </p>
+</li>
+</ol>
+<h2 id="intialize-neural-master-session">Intialize Neural Master session</h2>
+<ol>
+<li>
+<p>Select the menuitem Neural Master -&gt; Create workspace<br />
+   As the result you will see the following window<br><br>
+   <img alt="UI layout" src="../img/ui_layout.png" /><br />
+   The workspace described in <a href="../ui_basics/">UI basics</a><br />
+   The menuitem Neural Master will disappear from menu after creation workspace. </p>
+</li>
+<li>
+<p>Open Neural Master Panel  </p>
+</li>
+<li>
+<p>Move the mouse cursor in the area 1 of workspace (see the picture above) and then press N button to display panels  </p>
+</li>
+<li>
+<p>Then select "NeuralMaster" tab on the right side of the area as you can see on the picture bellow<br />
+<img alt="NeuralMaster tab closed" src="../img/neural_master_tab_closed.png" /></p>
+</li>
+<li>
+<p>Fill initial properties and then create the session</p>
+</li>
+</ol>
+<p>There are two main settings:</p>
+<ul>
+<li>mesh name  </li>
+<li>final UV name (that will use for baking the final texture)</li>
+</ul>
+<p>Also, you can select the initial texture if you have it. This texture can use another UV and you need to select it. 
+   If you don't have any texture, then select some initial color and all the model initially will fill by this color.
+   By default, the black color is selected, and usually it is enough.</p>
+<p>Bellow are two possible variants of the initial settings.       </p>
+<p><img alt="Initial black color" src="../img/create_session_color.png" />       <img alt="Initial texture" src="../img/create_session_texture.png" /></p>
+<p>Note:</p>
+<ul>
+<li>You must have the only instance of the textured mesh in the scene.</li>
+<li>All the modifiers of this object must be disabled. </li>
+<li>All the other object in the scene must be hidden, and their render must be disabled. </li>
+<li>You need to create UV before texturing, and it must be NON overlapping.</li>
+</ul>
+<h2 id="start-stable-diffusion">Start Stable Diffusion</h2>
+<p>Neural Master use Automatic1111 WebUI for Stable Diffusion to generate 2d images.
+You can launch it on local or remote host.</p>
+<p>Please follow the instruction on the <a href="(https://github.com/AUTOMATIC1111/stable-diffusion-webui?tab=readme-ov-file)">official site of Automatic 1111 WebUI</a> to deploy and launch it.</p>
+<p>Note:
+1. If you use external paid hosting for Stable Diffusion please don't forget to stop it when you finish or suspend the job.
+2. Before starting Stable Diffusion we recommend you to learn about main principles of Neural Master and Common Pipeline so as not to waste hosting time reading this instruction later.       </p>
+<h2 id="texture-the-model-using-neuralmaster">Texture the model using NeuralMaster</h2>
+<p>There are multiple possible pipelines for texturing 3d models using Neural Master.
+At the beginning we recommend to use <a href="../common_pipeline/">our suggestions</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../how_to_install_sd/" class="btn btn-neutral float-right" title="How to install SD">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../how_to_install_sd/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

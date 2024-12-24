@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.neuralmaster.org/panels/layers_panel/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Texture layers panel - Neural Master</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Texture layers panel";
+        var mkdocs_page_input_path = "panels\\layers_panel.md";
+        var mkdocs_page_url = "/panels/layers_panel/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+          <a href="../..">
+          <img src="../../img/nm_logo_top.png" class="logo" alt="Logo"/>
+        </a>
+      <div class="wy-side-nav-search"><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../get_started/">Get started</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../how_to_install_sd/">How to install SD</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../nm_inpainter/">SD extention</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../changelog/">Changelog</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../faq/">FAQ</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../basics/">Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../common_pipeline/">Common pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../support/">Support</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">UI</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../ui_basics/">UI Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../create_session_panel/">Create session panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../open_session_panel/">Open session panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../camera_panel/">Camera control panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../main_control_panel/">Main control panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../render_settings_panel/">Render settings panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sd_connection_panel/">SD connection panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sd_settings_panel/">(NEW) SD settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../sd_controlnet_panel/">SD ControlNet panel</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Texture layers panel</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#layer-list">Layer List</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#operations-with-layers">Operations with Layers</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#applying-a-layer-to-the-model">Applying a Layer to the Model</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sorting-layers">Sorting Layers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#deleting-a-layer">Deleting a Layer</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#restoring-a-deleted-layer">Restoring a Deleted Layer</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#displaying-the-camera-of-a-shot-layer">Displaying the Camera of a Shot Layer</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#combining-layers">Combining Layers</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#layer-properties">Layer Properties</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../player_panel/">Player panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../debug_panel/">Debug panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../inpaint_settings_panel/">(NEW) Inpait Settings panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../inpaint_tools_panel/">(NEW) Inpaint Tools panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../image_selector/">Image settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../addon_settings_page/">Addon preferences</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../integrated_products/">Integrated products</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../contacts/">Contacts</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Neural Master</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">UI</li>
+      <li class="breadcrumb-item active">Texture layers panel</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="texture-layers-panel">Texture Layers Panel</h1>
+<p>The Texture Layers Panel in NeuralMaster is where you manage and adjust individual texture layers of your 3D model.</p>
+<p>The panel has two areas and a set of buttons:<br />
+- <strong>Layers list</strong> - in the top side of the panel.<br />
+- <strong>Layer properties</strong> - in the bottom side.  </p>
+<h2 id="layer-list">Layer List</h2>
+<p>Here is a list of your texture layers.</p>
+<p>Each layer has a unique numerical identifier displayed in the panel. The initial layer always has the number '000', and each subsequent layer increments by one: 001, 002, 003, etc.<br />
+Also every layer has a type that is also displayed near ID. </p>
+<p>NeuralMaster supports <strong>3 types of layers</strong>:<br />
+- <strong>Initial Layer</strong>: The base texture layer created in the <a href="../create_session_panel/">Create Session Panel</a>.<br />
+- <strong>Shot Layers</strong>: Generated using Stable Diffusion, controlled by the <a href="../main_control_panel/">Main Control Panel</a>.<br />
+- <strong>Fusion Layers</strong>: Combinations of other layers, created using "Combine layers" button described bellow. </p>
+<p>The layers list supports two display modes, shown below:<br />
+- <strong>Only Active Layers</strong>: Displays only active layers that can be applied to the model now. (Left image)<br />
+- <strong>All Layers</strong>: Displays all layers, including deleted (archived) ones. (Right image)  </p>
+<p>To switch between these modes, use the checkbox at the top right corner of the panel.</p>
+<p><img alt="Texture Layers Panel" src="../../img/layers_panel.png" />
+<img alt="Texture Layers Panel Including Archive" src="../../img/layers_panel_including_archive.png" /></p>
+<h2 id="operations-with-layers">Operations with Layers</h2>
+<p>This panel allows you to execute various operations with layers.</p>
+<h3 id="applying-a-layer-to-the-model">Applying a Layer to the Model</h3>
+<p>Controlled by checkboxes to the left of the layer. 
+Enabling the checkbox applies the texture layer to the diffuse shader, and disabling it removes the layer from the shader.
+You will see the result immediately in 3D view areas. All checked layers are applied to the model simultaneously, added in the order listed. 
+If a checkbox is absent, the layer is deleted (but can be restored that you can see below).</p>
+<h3 id="sorting-layers">Sorting Layers</h3>
+<p>Reorder layers using the arrow buttons above the layers list.<br />
+The changes will be reflected immediately in both 3D view areas of the workspace.</p>
+<h3 id="deleting-a-layer">Deleting a Layer</h3>
+<p>Sometimes it's necessary to delete texture layers.<br />
+Deleting a layer removes its UV Map, marking it as "archived".
+Other objects (images, camera, settings) remain in the Blender file, and the layer is usually restorable.</p>
+<p>To delete a layer, select it and press the <strong>Trash</strong> button at the top.<br />
+Note that shots are automatically deleted when creating a Fusion layer.</p>
+<h3 id="restoring-a-deleted-layer">Restoring a Deleted Layer</h3>
+<p>A deleted layer can be restored by pressing the <strong>rounded arrow</strong> button on right.
+Restoration reactivates all layer entities; only the UV map is recreated from scratch,
+assuming the camera has not been modified, and the mesh remains unchanged, allowing for an accurate reconstruction.</p>
+<h3 id="displaying-the-camera-of-a-shot-layer">Displaying the Camera of a Shot Layer</h3>
+<p>Press the button with the <strong>camera icon</strong> in the layer's line to display the layer's camera.<br />
+The layer's camera, stored in the blend scene after being applied, will be set as active in the main view area.
+It's hidden, and its translation is locked, so please do not modify it.</p>
+<h3 id="combining-layers">Combining Layers</h3>
+<p>Press the <strong>Combine layers</strong> button at the bottom of the panel to create a new <strong>Fusion Layer</strong> from the checked layers by using Blender's "Bake" operator.<br />
+This layer will have the only diffuse texture using <strong>Destination UV Map</strong> (that was used during session creation).<br />
+When creating a Fusion layer, all source <strong>Shot Layers</strong> are deleted automatically, except those marked as <strong>undeletable</strong>.</p>
+<h2 id="layer-properties">Layer Properties</h2>
+<p>The Layer Properties area shows various properties of the selected layer. Most of them are shader properties, but some are other types.</p>
+<p><strong>Shader Properties</strong>: These are non-destructive and can be modified at any point from the creation of the shot layer onwards.</p>
+<ul>
+<li><strong>Max Depth</strong>: Controls the maximum depth for the depth map. It can be used to omit parts of the texture that are too far from the camera, such as when texturing a head to avoid including shoulders.</li>
+<li><strong>Max Normals Angle</strong>: Adjusts the 'Normals Angle' maps maximum value, which can help exclude areas where the texture is excessively stretched due to surface normals' perpendicularity to the camera's view.</li>
+<li><strong>Disable Shadow</strong>: Toggles the shadow mask used by NeuralMaster to cut off invisible parts of the model. It's typically enabled but can be disabled for texturing symmetrical parts of the model, as advised in <a href="best_practices.md">Best Practices</a>.</li>
+<li><strong>Contrast Correction</strong>: An <strong>EXPERIMENTAL OPTION</strong> that attempts to correct color distortion in areas affected by 'Normals Angle' values by increasing contrast.</li>
+</ul>
+<p><strong>Other Properties</strong>: </p>
+<ul>
+<li><strong>Undeletable</strong>: When baking a <strong>Fusion Layer</strong>, this option prevents the layer from being deleted.</li>
+<li><strong>Skip Playing</strong>: This option is utilized by the <a href="../player_panel/">Player</a> to skip playing the marked layer.</li>
+</ul>
+<p>After making adjustments, click <strong>Apply Settings</strong> to save the changes to the selected layer.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../sd_controlnet_panel/" class="btn btn-neutral float-left" title="SD ControlNet panel"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../player_panel/" class="btn btn-neutral float-right" title="Player panel">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../sd_controlnet_panel/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../player_panel/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

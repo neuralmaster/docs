@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://www.neuralmaster.org/how_to_install_sd/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>How to install SD - Neural Master</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "How to install SD";
+        var mkdocs_page_input_path = "how_to_install_sd.md";
+        var mkdocs_page_url = "/how_to_install_sd/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+          <a href="..">
+          <img src="../img/nm_logo_top.png" class="logo" alt="Logo"/>
+        </a>
+      <div class="wy-side-nav-search"><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../get_started/">Get started</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">How to install SD</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#deploy-sd-on-remote-server">Deploy SD on remote server</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#deploy-sd-using-runpod">Deploy SD using RunPod</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#runpod-instruction">Runpod Instruction</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#note">Note</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#deploy-sd-using-paperspace">Deploy SD using Paperspace</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#local-installation">Local installation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#notes">Notes</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-configuration-of-stable-diffusion-is-required">What configuration of Stable Diffusion is required?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#required-sd-components">Required SD components</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#optional-sd-components">Optional SD components</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../nm_inpainter/">SD extention</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../changelog/">Changelog</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../basics/">Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../common_pipeline/">Common pipeline</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../support/">Support</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">UI</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ui_basics/">UI Basics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/create_session_panel/">Create session panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/open_session_panel/">Open session panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/camera_panel/">Camera control panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/main_control_panel/">Main control panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/render_settings_panel/">Render settings panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/sd_connection_panel/">SD connection panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/sd_settings_panel/">(NEW) SD settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/sd_controlnet_panel/">SD ControlNet panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/layers_panel/">Texture layers panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/player_panel/">Player panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/debug_panel/">Debug panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/inpaint_settings_panel/">(NEW) Inpait Settings panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/inpaint_tools_panel/">(NEW) Inpaint Tools panel</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/image_selector/">Image settings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../panels/addon_settings_page/">Addon preferences</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Other</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../integrated_products/">Integrated products</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../contacts/">Contacts</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Neural Master</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">How to install SD</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="how-to-install-stable-diffusion">How to install Stable Diffusion</h1>
+<p>If you are new in Stable Difusion (SD), I recommend you to <strong>use remote SD</strong> server, but not local.<br />
+<strong>It is a cheap and simple way to start</strong>.</p>
+<p>If you use my recommendation bellow you will spend about 10$ at least for 2 weeks of close working with powerful server (for example A4500 20-24 VRAM) that costs several thousand of dollars.<br />
+Also, you will spend a few time to deploy SD not fighting against a lot of problem of local installation.  </p>
+<h2 id="deploy-sd-on-remote-server">Deploy SD on remote server</h2>
+<p>Neural Master uses Automatic1111 Web UI interface for access to Stable Diffusion (as is the most part of other solutions based on SD).</p>
+<p>I can recommend you 2 services:</p>
+<ul>
+<li>
+<p><a href="#deploy-sd-using-runpod"><strong>Runpod</strong></a>. If you use SD about ~4 hours every day or less, then, it seems, Runpod is better for you, because it has cheap price plan 'Community Server' and per minute billing.</p>
+</li>
+<li>
+<p><a href="#deploy-sd-using-paperspace"><strong>Paperspace</strong></a>. If you use SD ~6-8 hours or more every day, then Paperspace can be better, because it contains a good monthly subscription.   </p>
+</li>
+</ul>
+<p>I would recommend you to start with Runpod and then maybe go to Paperspace.</p>
+<h3 id="deploy-sd-using-runpod">Deploy SD using RunPod</h3>
+<p>RunPod is one of the best and cheapest ways to launch remote Stable Diffusion server for personal using because it contains cheap price plan 'Community Server' and per minute billing.   </p>
+<p>If you want to support Neural Master, please use this <a href="https://runpod.io?ref=uro6febx">Runpod link</a> to access it.</p>
+<p>The instructions below may seem complicated at first glance, but believe me, it is much simpler than local installation)</p>
+<p>Please follow my instructions, and it will take you half an hour just to run SD for the first time.</p>
+<p>Next time you will spend a couple of minutes.</p>
+<h4 id="runpod-instruction">Runpod Instruction</h4>
+<ol>
+<li>
+<p>Register account on <a href="https://runpod.io?ref=uro6febx">Runpod</a>.</p>
+</li>
+<li>
+<p>Add money to you account, the minimal amount is 10$.</p>
+</li>
+<li>
+<p>Create and deploy a new server (named Pod in RunPod)</p>
+<ul>
+<li>Open pods page and press '+ GPU Pod'</li>
+</ul>
+<p><img alt="Runpod pods list" src="../img/runpod_pods.png" /></p>
+<ul>
+<li>
+<p>Select the required properties of new pod:</p>
+<ul>
+<li>'<strong>Fast Stable Diffusion</strong>' template  </li>
+<li>'<strong>Community Cloud</strong>' cloud type  </li>
+<li>'<strong>Extreme</strong>' internet speed</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Runpod main setings" src="../img/runpod_main_settings.png" /></p>
+<ul>
+<li>Select the required server. <br />
+  I would recommend you 'A4500 20 GB VRAM, 29 GB RAM, 8 vCPU', 0.21$ per hour, because it is cheap and powerful. But be sure to try different ones.</li>
+</ul>
+<p><img alt="Runpod servers" src="../img/runpod_server_select.png" /></p>
+<ul>
+<li>In the next window confirm the selection</li>
+</ul>
+<p><img alt="Pod confirm" src="../img/runpod_server_confirm.png" /></p>
+<ul>
+<li>Confirm again here, and wait a minute while the server is deploying. </li>
+</ul>
+<p><img alt="Pod confirm again" src="../img/runpod_server_confirm_2.png" /></p>
+</li>
+<li>
+<p>Connect to the server.</p>
+<ul>
+<li>Press 'Connect' button </li>
+</ul>
+<p><img alt="Pod confirm again" src="../img/runpod_connect.png" /></p>
+<ul>
+<li>Press 'Connect to Jupyter' button </li>
+</ul>
+<p><img alt="Pod confirm again" src="../img/runpod_connect_to_jupyter.png" /></p>
+<p>Now the environment for your server is created, and you can configure the settings of Stable Diffusion.</p>
+</li>
+<li>
+<p>Configure the parameters of SD and launch it.</p>
+<ul>
+<li>Double click 'RNPD-A1111.ipynb' to open configuration notebook </li>
+</ul>
+<p><img alt="Pod confirm again" src="../img/runpod_jupiter_select_notebook.png" /></p>
+<ul>
+<li>Scroll the opened notebook to the section 'Model Download/Load' and modify the string:  <br />
+<em>Original_Model_Version = "v1.5"</em><br />
+  (SD version 1.5 is usually better for texturing that the default one SDXL)</li>
+</ul>
+<p><img alt="Pod confirm again" src="../img/runpod_jupiter_select_model.png" /></p>
+<ul>
+<li>Scroll the notebook to the section 'ControlNet' and add a couple of strings (ControlNets 'Depth' and 'Normals'):  <br />
+<em>CNet("2", ControlNet_XL_Model)<br />
+  CNet("5", ControlNet_XL_Model)</em></li>
+</ul>
+<p><img alt="Pod confirm again" src="../img/runpod_jupiter_select_controlnet.png" /></p>
+<ul>
+<li>Press double-triangle button 'Restart Kernal and Run All Cells...' in the top panel, confirm selection and wait 1-3 minutes:  </li>
+</ul>
+<p><img alt="Pod confirm again" src="../img/runpod_jupiter_start.png" /></p>
+<ul>
+<li>Open Stable Diffusion Web UI by clicking to the link in the bottom of the notebook:  </li>
+</ul>
+<p><img alt="Pod confirm again" src="../img/runpod_jupiter_sd_link.png" /></p>
+<ul>
+<li>Make sure the page opens:  </li>
+</ul>
+<p><img alt="Pod confirm again" src="../img/runpod_jupiter_sd_opened.png" /></p>
+</li>
+<li>
+<p>Install additional components.</p>
+<p>Unfortunately Fast Stable Diffusion Template (used above) does not contain two components important for Neural Master:</p>
+<ul>
+<li>
+<p><strong>IP adapter</strong> ControlNet</p>
+</li>
+<li>
+<p><strong>Neural Master Inpainter</strong> Extension </p>
+</li>
+</ul>
+<p>Let's install them.</p>
+<ul>
+<li>Create a new empty Notebook </li>
+</ul>
+<p><img alt="Create an empty Jupyter notebook" src="../img/runpod_jupyter_create_empty.png" /></p>
+<ul>
+<li>Open <a href="../py/sd_deploy.py">this script from this site</a>, select all and copy it to clipboard </li>
+</ul>
+<p><img alt="Create an empty Jupyter notebook" src="../img/sd_deploy_script.png" /></p>
+<ul>
+<li>Paste selection to the empty notebook created above and launch it</li>
+</ul>
+<p><img alt="Create an empty Jupyter notebook" src="../img/runpod_jupyter_sd_deploy_run.png" /></p>
+<ul>
+<li>Switch back to the main notebook 'RNPD-A1111.ipynb' and restart it</li>
+</ul>
+<p><img alt="Pod confirm again" src="../img/runpod_jupiter_restart.png" /></p>
+<ul>
+<li>Make sure the page opens:  </li>
+</ul>
+<p><img alt="Pod confirm again" src="../img/runpod_jupiter_sd_opened.png" /></p>
+<ul>
+<li>Copy url of this page and use it in Neural Master </li>
+</ul>
+</li>
+</ol>
+<p>That is all.</p>
+<h4 id="note">Note</h4>
+<p><strong>Don't forget to stop server after finishing working or when you have a long pause because RunPod has per minute billing.</strong></p>
+<h3 id="deploy-sd-using-paperspace">Deploy SD using Paperspace</h3>
+<p>Documentation is under development</p>
+<h2 id="local-installation">Local installation</h2>
+<p>There are a lot of instructions about how to install local SD.  <br />
+I recommend you to use the original instructions from the developer of Automatic1111 Web UI and ControlNet that is listed bellow.</p>
+<ol>
+<li>
+<p>Install Stable Diffusion Automatic1111 Web UI using the <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui?tab=readme-ov-file#installation-and-running">original instruction from the developer of Automatic1111 Web UI</a></p>
+</li>
+<li>
+<p>Install additional components:</p>
+<ul>
+<li>
+<p>Install <strong>ControlNet</strong> extension and common models '<strong>control_v11p_sd15_normalbae</strong>' and '<strong>control_v11f1p_sd15_depth</strong>'. <a href="https://github.com/Mikubill/sd-webui-controlnet#installation">Installation instructions from the developer of ControlNet</a>    </p>
+</li>
+<li>
+<p>Install <strong>IP adapters</strong> ControlNets models. Use the same <a href="https://github.com/Mikubill/sd-webui-controlnet#installation">Installation instructions</a>, 
+   and download models from the following addresses:  </p>
+<ul>
+<li><strong>ip-adapter-plus</strong>: <a href="https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus_sd15.safetensors">https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus_sd15.safetensors</a> </li>
+<li><strong>ip-adapter</strong>: <a href="https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter_sd15.safetensors">https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter_sd15.safetensors</a> </li>
+<li><strong>ip-adapter-plus-face</strong>: <a href="https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus-face_sd15.safetensors">https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter-plus-face_sd15.safetensors</a> </li>
+</ul>
+</li>
+<li>
+<p>Install <strong>Neural Master Inpainter</strong> extension. </p>
+<ul>
+<li>Click to the tab 'Extensions' in the top menu of Automatic 1111 Web UI.</li>
+<li>Click to the tab "Install from URL".</li>
+<li>Enter the URL of the extension: https://github.com/neuralmaster/neuralmaster_inpainter.git</li>
+<li>Click 'Install' button.</li>
+<li>Click 'Apply and Restart UI'.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="notes">Notes</h3>
+<ol>
+<li>If you would like to use SDXL then the ControlMet models must be others, but I recommend to start with SD15. </li>
+</ol>
+<h2 id="what-configuration-of-stable-diffusion-is-required">What configuration of Stable Diffusion is required?</h2>
+<p>Here is a small explanation of SD configuration created above.</p>
+<p>Some Stable Diffusion components are indeed required, and some are optional.</p>
+<h3 id="required-sd-components">Required SD components</h3>
+<ol>
+<li>Use SD 1.5 model or a model derived from it (for example, Deliberate, Photon or another). This version better than SDXL because SDXL does not supports Normal Map ControlNet models that is very important.</li>
+<li>Depth ControlNet (exists for SD1.5 and SDXL) is required to the texture fits accurately on the model.</li>
+<li>Normal map ControlNet (exists for SD1.5 only) is also required so texture fits accurately on the model, in combination with the depth map ControlNet. </li>
+<li>A set of IP adapters (exists for SD1.5 and SDXL) but primarily IP Adapter Plus are requred to use reference image.</li>
+</ol>
+<p>If you are using a Fast Stable Diffusion environment, which I recommend above, all of these details (an even more other ControlNet models) are already in the environment, except for IP Adapters.
+You can use the following <a href="../py/sd_deploy.py">Python script to download and deploy IP adapters</a>.
+Please fix the destination folder in the script before running it.</p>
+<h3 id="optional-sd-components">Optional SD components</h3>
+<ol>
+<li>SDXL model. Use it if you need high resolution, that is usually the most important for the first texture layer. 
+SDXL don't support Normal Maps and so the texture will not fit so accurately on the model as SD15 can, but in many cases it's enough to use Depth map and Canny Edge ControlNet giving the Fresnel map to the preprocessor.    </li>
+<li>Canny Edge ControlNet (exists for SD1.5 and SDXL) is often required to fix macro details when inpainting micro details. Also, it can be used to texture fits accurately on the model if you use SDXL but not SD 1.5 (In this case use Fresnel map as an input of Canny preprocessor).</li>
+<li>ControlNet reference_only. This can also be used to add a reference image, but the IP Adapter Plus typically yields better results.</li>
+<li>Scribble Controlnet (exists for SD1.5 and SDXL) often can be used to add some details of texture as patterns for these details.</li>
+<li>LoRA models. This is a perfect way to keep generation consistent, but creating LoRA requires additional work.
+If you plan to use neural art regularly (which in my opinion is absolutely necessary today), you should study LoRA technology and create and use your own LoRA models.</li>
+<li>Inpainting SD models (for example, a <a href="https://huggingface.co/runwayml/stable-diffusion-inpainting/resolve/main/sd-v1-5-inpainting.ckpt">model from Runway</a>).
+This often results in a really smooth and high-quality blend of textures, but usually the image is blurred and lacks interesting detail.</li>
+<li>Custom SD models. Typically, neural artists use such models, rather than the original SD 1.5 or SDXL, because custom models, which are based on the original models, 
+but created later and created by neural artists that use it and contain knowledge crucial for practical tasks.
+However, I don't have specific information yet about how effective these models are for texturing, so I can recommend none of them as a required.
+I hope that soon there will be new models more focused on texturing. </li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../get_started/" class="btn btn-neutral float-left" title="Get started"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../nm_inpainter/" class="btn btn-neutral float-right" title="SD extention">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../get_started/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../nm_inpainter/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

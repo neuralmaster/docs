@@ -1,0 +1,10 @@
+.wy-nav-side {
+    background-color: #051012; /*20A1019;051012*/
+}
+
+.wy-side-nav-search {
+    background-image: url('img/logo_rendered_06_site_bottom.png');
+    background-position: center; /* Centers the image in the element */
+    background-size: cover; /* Scales the image to be as large as possible so that the element's entire area is covered */
+    background-repeat: no-repeat;
+}
