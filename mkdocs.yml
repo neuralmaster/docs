@@ -1,0 +1,40 @@
+site_name: Neural Master
+site_url: https://www.neuralmaster.org/
+theme:
+  name: readthedocs
+  logo: 'img/nm_logo_top.png'
+  custom_dir: overrides/
+nav:
+  - Home: index.md
+  - Get started: get_started.md
+  - How to install SD: how_to_install_sd.md
+  - SD extention: nm_inpainter/README.md
+  - Changelog: changelog.md
+  - FAQ: faq.md
+  - 'User Guide':
+    - Basics: basics.md
+    - Common pipeline: common_pipeline.md
+    - Support: support.md
+  - 'UI':
+    - UI Basics: ui_basics.md
+    - Create session panel: panels/create_session_panel.md
+    - Open session panel: panels/open_session_panel.md
+    - Camera control panel: panels/camera_panel.md
+    - Main control panel: panels/main_control_panel.md
+    - Render settings panel: panels/render_settings_panel.md
+    - SD connection panel: panels/sd_connection_panel.md
+    - (NEW) SD settings: panels/sd_settings_panel.md
+    - SD ControlNet panel: panels/sd_controlnet_panel.md
+    - Texture layers panel: panels/layers_panel.md
+    - Player panel: panels/player_panel.md
+    - Debug panel: panels/debug_panel.md
+    - (NEW) Inpait Settings panel: panels/inpaint_settings_panel.md
+    - (NEW) Inpaint Tools panel: panels/inpaint_tools_panel.md
+    - Image settings: panels/image_selector.md
+    - Addon preferences: panels/addon_settings_page.md
+  - Other:
+    - Integrated products: integrated_products.md
+    - Contacts: contacts.md
+
+extra_css:
+  - style.css
