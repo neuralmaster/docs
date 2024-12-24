@@ -1,0 +1,13 @@
+copy index.md get_started.md
+copy index.md initialization.md
+copy index.md control_panel.md
+copy index.md render_settings_panel.md
+copy index.md connection_panel.md
+copy index.md sd_simple_panel.md
+copy index.md sd_advanced_panel.md
+copy index.md sd_img2img_panel.md
+copy index.md sd_controlnet_panel.md
+copy index.md frames_panel.md
+copy index.md settings_panel.md
+copy index.md addon_settings_page.md
+copy index.md debug_panel.md

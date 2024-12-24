@@ -1,0 +1,105 @@
+<h1>Common Pipeline</h1>
+
+<p>There are a vast number of different workflows with NeuralMaster, 
+which depend on your task (creating a full texture for a model or refining details of an existing texture),
+your working pipeline, style, and many other details.
+The author believes he knows only a small portion of the possible options and hopes that users will find many of their own techniques.   </p>
+
+<p>Below is one of the possible pipelines, combining different techniques. <br />
+And here is a video using this pipeline.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+          src="https://www.youtube.com/embed/b9qeVCmwJ2c" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+  </iframe>
+</div>
+
+<p><br></p>
+
+<h2>1. Create the First Texture Layer - Main View of the Model</h2>
+
+<p>The task - to texture as much area of the model as possible with one frame.</p>
+
+<ol>
+<li>txt2img or img2img mode.</li>
+<li>Orthogonal camera.</li>
+<li>Controlnet Depth + Normal </li>
+<li>Prompt + optional reference image (IP Adapter Plus) + optional Lora</li>
+<li>Roll several iteration</li>
+</ol>
+
+<p><img src="../gif/first_shot_png.gif" alt="First frame" /></p>
+
+<p>This is where the work of other texturing tools based on NN/ML ends, but we will go further!</p>
+
+<p>Показать создание первого кадра</p>
+
+<h2>2. Improve the Texture Quality at the Junction of Halves</h2>
+
+<ol>
+<li>Inpaint mode.</li>
+<li>ControlNet Depth + Normal.</li>
+<li>Prompt + optional reference image (IP Adapter Plus) + optional Lora.</li>
+<li>Optional ControlNet Canny to fix desirable texture patern.</li>
+<li>Roll several iteration</li>
+</ol>
+
+<p><img src="../gif/second_shot_png.gif" alt="Fill the border" /></p>
+
+<h2>3. Create a Reference Texture for Refining Micro-Detail of the Model's Texture</h2>
+
+<ol>
+<li>Find a reference section of the finished texture.</li>
+<li>Take a screenshot and save it.</li>
+</ol>
+
+<p><img src="../gif/create_pattern_png.gif" alt="Create reference image" /></p>
+
+<h2>4. Enhance Micro-Details of the Texture Using the Reference Mask</h2>
+
+<ol>
+<li>Inpaint mode.</li>
+<li>Use reference image (ControlNet IP adapter Plus).</li>
+<li>Inpaint all the required fragments of the model.</li>
+</ol>
+
+<p><img src="../gif/inpaint_by_pattern_png.gif" alt="Inpaint by battern" /></p>
+
+<h2>5. Add unique details using precise pattern</h2>
+
+<ol>
+<li>Inpaint mode</li>
+<li>ControlNet: IP Adapter Plus, Scribblle, Depth</li>
+<li>Prompt is important</li>
+</ol>
+
+<p><img src="../gif/wooden_can_logo_png.gif" alt="Wooden can logo" /></p>
+
+<h2>6. Texture individual details of the Model</h2>
+
+<ol>
+<li>Combine techniques from previous suggestions.</li>
+<li>Take many shots to correct all visible defects.</li>
+</ol>
+
+<p><img src="../gif/texture_head_png.gif" alt="Texture head" /></p>
+
+<h2>7. Bake Texture Layers into a Single Combo Layer</h2>
+
+<ol>
+<li>Select the necessary layers using Layer editor.</li>
+<li>Press the baking button.</li>
+</ol>
+
+<p><img src="../gif/make_fusion_layer_png.gif" alt="Make comby layer" /></p>
+
+<h2>Bonus! Create a Video Visualizing the Texturing Process</h2>
+
+<ol>
+<li>Set the start and end layers, and the number of frames per layer.</li>
+<li>Preview video using Play button.</li>
+<li>Record video to files.</li>
+</ol>
